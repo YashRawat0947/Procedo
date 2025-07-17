@@ -709,22 +709,22 @@ function App() {
               <h4 className="font-semibold mb-4">Solutions</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     IT Infrastructure
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     Facilities Security
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     AV Conferencing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     Support Services
                   </a>
                 </li>
@@ -735,22 +735,22 @@ function App() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     Case Studies
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     Careers
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-700 transition-colors">
                     Contact
                   </a>
                 </li>
@@ -760,13 +760,13 @@ function App() {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-700 transition-colors">
                   LinkedIn
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-700 transition-colors">
                   Twitter
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-700 transition-colors">
                   YouTube
                 </a>
               </div>
