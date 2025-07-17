@@ -74,7 +74,7 @@ function Home() {
       <Navbar scrolled={scrolled} handleButtonClick={handleButtonClick} />
 
       {/* Hero Section */}
-      <section className="hero-section relative pt-16 pb-12 md:pt-32 md:pb-24 overflow-hidden">
+      <section className="hero-section relative mt-11 pt-16 pb-12 md:pt-32 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100" />
         <div className="absolute inset-0 opacity-10">
           <img
@@ -83,19 +83,24 @@ function Home() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative container mx-auto px-2 sm:px-4 max-w-7xl">
-          <div className="max-w-xl sm:max-w-4xl my-5 mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-              We Design Systems That Work <span className="text-[#ec5d32]">Intelligently</span>—So You Can Focus on What Matters
+        <div className="relative container mx-auto px-4 sm:px-6 max-w-7xl">
+          <div className="max-w-lg sm:max-w-3xl my-6 mx-auto text-center px-2">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-snug break-words">
+              We Design Systems That Work <span className="text-[#ec5d32]">Intelligently</span>—
+              <br className="block sm:hidden" />
+              So You Can Focus on What Matters
             </h1>
-            <p className="text-base sm:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-              From secure IT infrastructure to advanced building automation and AV ecosystems—we help businesses operate smarter, safer, and more connected.
+
+            <p className="text-sm sm:text-lg text-gray-600 mb-5 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
+              From secure IT infrastructure to advanced building automation and AV ecosystems—
+              we help businesses operate smarter, safer, and more connected.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              {/* 2. Hero Section Buttons */}
+              {/* Hero Section Buttons */}
               <Button
                 size="lg"
-                className="bg-[#F24E1E] hover:bg-[#d63e13] text-lg px-6 py-3 text-white"
+                className="bg-[#F24E1E] hover:bg-[#d63e13] text-base sm:text-lg px-6 py-3 text-white"
                 onClick={() => handleButtonClick("Explore Solutions")}
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -104,14 +109,15 @@ function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-6 py-3 border-[#F24E1E] text-[#F24E1E] hover:bg-[#FFF6EC] bg-transparent"
+                className="text-base sm:text-lg px-6 py-3 border-[#F24E1E] text-[#F24E1E] hover:bg-[#FFF6EC] bg-transparent"
                 onClick={() => handleButtonClick("Book Consultation")}
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book a Free Consultation
               </Button>
             </div>
-            <div className="mt-8 sm:mt-12 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
+
+            <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-gray-500">
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
                 15+ Years Experience
@@ -127,6 +133,7 @@ function Home() {
             </div>
           </div>
         </div>
+
       </section>
 
       {/* Scroll To Top Button */}
