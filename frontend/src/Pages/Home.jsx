@@ -204,9 +204,9 @@ function Home() {
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div id="it" className="space-y-16">
             {/* IT Infrastructure */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div  className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-4">
@@ -321,7 +321,7 @@ function Home() {
                 </Button>
               </div>
 
-              <div className="relative">
+              <div id="security" className="relative">
                 <img
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="IT Infrastructure visualization"
@@ -331,7 +331,7 @@ function Home() {
             </div>
 
             {/* Facilities Security */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div  className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-4">
@@ -427,7 +427,7 @@ function Home() {
                 </Button>
               </div>
 
-              <div className="relative lg:order-1">
+              <div id="audio" className="relative lg:order-1">
                 <img
                   src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="Security system visualization"
@@ -437,7 +437,7 @@ function Home() {
             </div>
 
             {/* Audio & Video Conferencing */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div  className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-4">
