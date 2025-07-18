@@ -198,130 +198,136 @@ function Home() {
       <section id="solutions" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div id="it" className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Three Pillars of Expertise</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Three Pillars of Expertise
+            </h2>
+            <p className="text-sm sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to transform how your business operates
             </p>
           </div>
 
-          <div  className="space-y-16">
+          <div className="space-y-16">
             {/* IT Infrastructure */}
-            <div  className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-4">
-                    <Server className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">IT Infrastructure</h3>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Mobile: Image as background behind text */}
+              <div className="relative w-full">
+                <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="IT Infrastructure visualization"
+                    className="w-full h-full object-cover opacity-20"
+                  />
                 </div>
-                <p className="text-lg text-[#F24E1E] font-medium mb-4">
-                  "Digital foundations built for agility and scale."
-                </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Modern businesses need more than just devices—they need a scalable, secure digital backbone. We
-                  deliver enterprise-grade IT solutions tailored to your goals.
-                </p>
+                <div className="relative z-10 p-2 sm:p-0">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                      <Server className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">IT Infrastructure</h3>
+                  </div>
+                  <p className="text-xs sm:text-lg text-[#F24E1E] font-medium mb-2 sm:mb-4">
+                    "Digital foundations built for agility and scale."
+                  </p>
+                  <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-xs sm:text-base">
+                    Modern businesses need more than just devices—they need a scalable, secure digital backbone. We
+                    deliver enterprise-grade IT solutions tailored to your goals.
+                  </p>
 
-                <div className="space-y-6 mb-8">
-                  {/* Network Architecture */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Network className="w-4 h-4 text-white" />
+                  <div className="space-y-4 sm:space-y-6 mb-4 sm:mb-8">
+                    {/* Network Architecture */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Network className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Network Architecture</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• LAN/WAN design and deployment</p>
+                            <p>• High-performance Wi-Fi (mesh, enterprise-grade)</p>
+                            <p>• VPNs, firewalls, SD-WAN configuration</p>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Network Architecture</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• LAN/WAN design and deployment</p>
-                          <p>• High-performance Wi-Fi (mesh, enterprise-grade)</p>
-                          <p>• VPNs, firewalls, SD-WAN configuration</p>
+                    </div>
+                    {/* Server & Storage Solutions */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Cloud className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Server & Storage Solutions</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• On-prem and cloud server setups (AWS, Azure, GCP)</p>
+                            <p>• Virtualization: VMware, Proxmox, Hyper-V</p>
+                            <p>• NAS/SAN storage with redundancy</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Endpoint & Access Security */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Endpoint & Access Security</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• SSO, LDAP, Azure AD</p>
+                            <p>• Role-based access controls</p>
+                            <p>• Patch and asset management</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Continuity & Recovery */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Database className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Continuity & Recovery</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• Backup strategy (cloud/local/hybrid)</p>
+                            <p>• Disaster recovery plans</p>
+                            <p>• Monitoring and failover systems</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Internet & Hosting Setup */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Internet & Hosting Setup</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• Domain registration, DNS</p>
+                            <p>• Email (Gmail, Zoho, Outlook)</p>
+                            <p>• SSL, spam filters, DMARC</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  {/* Server & Storage Solutions */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Cloud className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Server & Storage Solutions</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• On-prem and cloud server setups (AWS, Azure, GCP)</p>
-                          <p>• Virtualization: VMware, Proxmox, Hyper-V</p>
-                          <p>• NAS/SAN storage with redundancy</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Endpoint & Access Security */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Shield className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Endpoint & Access Security</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• SSO, LDAP, Azure AD</p>
-                          <p>• Role-based access controls</p>
-                          <p>• Patch and asset management</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Continuity & Recovery */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Database className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Continuity & Recovery</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• Backup strategy (cloud/local/hybrid)</p>
-                          <p>• Disaster recovery plans</p>
-                          <p>• Monitoring and failover systems</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Internet & Hosting Setup */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Globe className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Internet & Hosting Setup</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• Domain registration, DNS</p>
-                          <p>• Email (Gmail, Zoho, Outlook)</p>
-                          <p>• SSL, spam filters, DMARC</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <blockquote className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4 italic text-gray-700 mb-4 sm:mb-6 text-xs sm:text-base">
+                    "We don't just install servers. We build systems that carry your ambitions."
+                  </blockquote>
+                  <Button
+                    className="bg-[#F24E1E] hover:bg-[#d63e13] text-white text-xs sm:text-base"
+                    onClick={() => handleButtonClick("IT Solutions")}
+                  >
+                    Learn More About IT Solutions
+                  </Button>
                 </div>
-
-                <blockquote className="border-l-4 border-[#F24E1E] pl-4 italic text-gray-700 mb-6">
-                  "We don't just install servers. We build systems that carry your ambitions."
-                </blockquote>
-
-                <Button
-                  className="bg-[#F24E1E] hover:bg-[#d63e13] text-white"
-                  onClick={() => handleButtonClick("IT Solutions")}
-                >
-                  Learn More About IT Solutions
-                </Button>
               </div>
-
-              <div id="security" className="relative">
+              {/* Desktop: Image on side */}
+              <div id="security" className="hidden lg:block relative">
                 <img
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="IT Infrastructure visualization"
@@ -331,103 +337,109 @@ function Home() {
             </div>
 
             {/* Facilities Security */}
-            <div  className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="lg:order-2">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-4">
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Facilities Security</h3>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative w-full lg:order-2">
+                <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Security system visualization"
+                    className="w-full h-full object-cover opacity-20"
+                  />
                 </div>
-                <p className="text-lg text-[#F24E1E] font-medium mb-4">
-                  "Smart environments that sense, protect, and evolve."
-                </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  We turn physical spaces into intelligent environments with integrated security systems that are proactive,
-                  not reactive.
-                </p>
+                <div className="relative z-10 p-2 sm:p-0">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                      <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">Facilities Security</h3>
+                  </div>
+                  <p className="text-xs sm:text-lg text-[#F24E1E] font-medium mb-2 sm:mb-4">
+                    "Smart environments that sense, protect, and evolve."
+                  </p>
+                  <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-xs sm:text-base">
+                    We turn physical spaces into intelligent environments with integrated security systems that are proactive,
+                    not reactive.
+                  </p>
 
-                <div className="space-y-6 mb-8">
-                  {/* Surveillance Systems */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Camera className="w-4 h-4 text-white" />
+                  <div className="space-y-4 sm:space-y-6 mb-4 sm:mb-8">
+                    {/* Surveillance Systems */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Camera className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Surveillance Systems</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• IP CCTV: PTZ, fisheye, thermal</p>
+                            <p>• VMS software and cloud-based archiving</p>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Surveillance Systems</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• IP CCTV: PTZ, fisheye, thermal</p>
-                          <p>• VMS software and cloud-based archiving</p>
+                    </div>
+                    {/* Access Control */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Fingerprint className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Access Control</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• Biometrics: fingerprint, facial</p>
+                            <p>• RFID, NFC, mobile credentials</p>
+                            <p>• Zonal control and visitor workflow integration</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Building Management Systems */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Lock className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Building Management Systems (BMS)</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• HVAC, fire alarm, lighting automation</p>
+                            <p>• Central dashboard for energy and environment control</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Monitoring & Reporting */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Monitor className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Monitoring & Reporting</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• Real-time dashboards</p>
+                            <p>• Remote diagnostics and alerts</p>
+                            <p>• Compliance-ready audit trails</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Access Control */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Fingerprint className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Access Control</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• Biometrics: fingerprint, facial</p>
-                          <p>• RFID, NFC, mobile credentials</p>
-                          <p>• Zonal control and visitor workflow integration</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <blockquote className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4 italic text-gray-700 mb-4 sm:mb-6 text-xs sm:text-base">
+                    "Security isn't about fear—it's about freedom to focus."
+                  </blockquote>
 
-                  {/* Building Management Systems */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Lock className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Building Management Systems (BMS)</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• HVAC, fire alarm, lighting automation</p>
-                          <p>• Central dashboard for energy and environment control</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Monitoring & Reporting */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Monitor className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Monitoring & Reporting</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• Real-time dashboards</p>
-                          <p>• Remote diagnostics and alerts</p>
-                          <p>• Compliance-ready audit trails</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <Button
+                    className="bg-[#F24E1E] hover:bg-[#d63e13] text-white text-xs sm:text-base"
+                    onClick={() => handleButtonClick("Security Solutions")}
+                  >
+                    Explore Security Solutions
+                  </Button>
                 </div>
-
-                <blockquote className="border-l-4 border-[#F24E1E] pl-4 italic text-gray-700 mb-6">
-                  "Security isn't about fear—it's about freedom to focus."
-                </blockquote>
-
-                <Button
-                  className="bg-[#F24E1E] hover:bg-[#d63e13] text-white"
-                  onClick={() => handleButtonClick("Security Solutions")}
-                >
-                  Explore Security Solutions
-                </Button>
               </div>
 
-              <div id="audio" className="relative lg:order-1">
+              <div id="audio" className="hidden lg:block relative lg:order-1">
                 <img
                   src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="Security system visualization"
@@ -437,87 +449,96 @@ function Home() {
             </div>
 
             {/* Audio & Video Conferencing */}
-            <div  className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-4">
-                    <Video className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Audio & Video Conferencing</h3>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative w-full">
+                <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
+                  <img
+                    src="video.png"
+                    alt="AV conferencing setup"
+                    className="w-full h-full object-cover opacity-20"
+                  />
                 </div>
-                <p className="text-lg text-[#F24E1E] font-medium mb-4">
-                  "Spaces that connect with clarity, ease, and presence."
-                </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Whether it's boardrooms or remote workspaces, we engineer communication environments that feel
-                  effortless and immersive.
-                </p>
+                <div className="relative z-10 p-2 sm:p-0">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                      <Video className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">Audio & Video Conferencing</h3>
+                  </div>
+                  <p className="text-xs sm:text-lg text-[#F24E1E] font-medium mb-2 sm:mb-4">
+                    "Spaces that connect with clarity, ease, and presence."
+                  </p>
+                  <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-xs sm:text-base">
+                    Whether it's boardrooms or remote workspaces, we engineer communication environments that feel
+                    effortless and immersive.
+                  </p>
 
-                <div className="space-y-6 mb-8">
-                  {/* Room Design & Acoustics */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Monitor className="w-4 h-4 text-white" />
+                  <div className="space-y-4 sm:space-y-6 mb-4 sm:mb-8">
+                    {/* Room Design & Acoustics */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Monitor className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Room Design & Acoustics</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• Sightline and acoustic optimization</p>
+                            <p>• Lighting for engagement</p>
+                            <p>• Noise control treatments</p>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Room Design & Acoustics</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• Sightline and acoustic optimization</p>
-                          <p>• Lighting for engagement</p>
-                          <p>• Noise control treatments</p>
+                    </div>
+
+                    {/* Platform Integration */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Headphones className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Platform Integration</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• Zoom, Teams, Webex</p>
+                            <p>• AV control (Crestron, Extron)</p>
+                            <p>• BYOD and calendar sync</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Hardware Setup */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Mic className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Hardware Setup</h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>• PTZ cameras, ceiling mics, smart displays</p>
+                            <p>• Wireless presentation, voice tracking</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Platform Integration */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Headphones className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Platform Integration</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• Zoom, Teams, Webex</p>
-                          <p>• AV control (Crestron, Extron)</p>
-                          <p>• BYOD and calendar sync</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <blockquote className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4 italic text-gray-700 mb-4 sm:mb-6 text-xs sm:text-base">
+                    "A great conversation shouldn't depend on your geography."
+                  </blockquote>
 
-                  {/* Hardware Setup */}
-                  <div className="border-l-4 border-[#F24E1E] pl-4">
-                    <div className="flex items-start mb-3">
-                      <div className="w-8 h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                        <Mic className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Hardware Setup</h4>
-                        <div className="text-gray-600 text-sm space-y-1 mt-1">
-                          <p>• PTZ cameras, ceiling mics, smart displays</p>
-                          <p>• Wireless presentation, voice tracking</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <Button
+                    className="bg-[#F24E1E] hover:bg-[#d63e13] text-white text-xs sm:text-base"
+                    onClick={() => handleButtonClick("AV Solutions")}
+                  >
+                    Discover AV Solutions
+                  </Button>
                 </div>
-
-                <blockquote className="border-l-4 border-[#F24E1E] pl-4 italic text-gray-700 mb-6">
-                  "A great conversation shouldn't depend on your geography."
-                </blockquote>
-
-                <Button
-                  className="bg-[#F24E1E] hover:bg-[#d63e13] text-white"
-                  onClick={() => handleButtonClick("AV Solutions")}
-                >
-                  Discover AV Solutions
-                </Button>
               </div>
 
-              <div className="relative">
+              <div className="hidden lg:block relative">
                 <img
                   src="video.png"
                   alt="AV conferencing setup"
