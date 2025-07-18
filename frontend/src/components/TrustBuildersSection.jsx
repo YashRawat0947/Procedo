@@ -61,45 +61,45 @@ function InfiniteTestimonials() {
   const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
   
   return (
-    <div className="relative overflow-hidden mb-16">
+    <div className="relative overflow-hidden mb-8 sm:mb-16">
       <div
         ref={scrollRef}
-        className="flex gap-4 sm:gap-6 overflow-x-hidden"
+        className="flex gap-3 sm:gap-4 md:gap-6 overflow-x-hidden"
         style={{ scrollBehavior: 'auto' }}
       >
         {extendedTestimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-72 sm:w-80 lg:w-96 bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-4 sm:p-6 lg:p-8 border border-gray-100"
+            className="flex-shrink-0 w-64 sm:w-72 md:w-80 lg:w-96 bg-white rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-3 sm:p-4 md:p-6 lg:p-8 border border-gray-100"
           >
             {/* Name and Pic Top Left */}
-            <div className="flex items-center mb-4 sm:mb-6">
+            <div className="flex items-center mb-3 sm:mb-4 md:mb-6">
               <img
                 src={testimonial.avatar}
                 alt={testimonial.name}
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover mr-2 sm:mr-3 md:mr-4"
               />
               <div>
-                <h4 className="font-semibold text-gray-900 text-sm sm:text-base">
+                <h4 className="font-semibold text-gray-900 text-xs sm:text-sm md:text-base">
                   {testimonial.name}
                 </h4>
-                <p className="text-xs sm:text-sm text-gray-500">
+                <p className="text-xs sm:text-xs md:text-sm text-gray-500">
                   {testimonial.title}
                 </p>
               </div>
             </div>
             
             {/* Testimonial Text */}
-            <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 min-h-[60px] sm:min-h-[80px]">
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4 md:mb-6 min-h-[45px] sm:min-h-[60px] md:min-h-[80px]">
               "{testimonial.text}"
             </p>
             
             {/* Stars Bottom Center */}
-            <div className="flex justify-center gap-1">
+            <div className="flex justify-center gap-0.5 sm:gap-1">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Star
                   key={star}
-                  className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400"
+                  className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 fill-yellow-400 text-yellow-400"
                 />
               ))}
             </div>
@@ -126,10 +126,10 @@ const Badge = ({ variant = "default", className = "", children }) => {
 
 function TrustBuildersSection() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-8 sm:py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-6">
             Trusted by Industry Leaders. Built for the Future.
           </h2>
         </div>
@@ -138,17 +138,17 @@ function TrustBuildersSection() {
         <InfiniteTestimonials />
         
         {/* Security Badges */}
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          <Badge variant="outline" className="px-4 py-2 text-sm">
-            <Shield className="w-4 h-4 mr-2" />
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-8">
+          <Badge variant="outline" className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
+            <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
             ISO 27001 Certified
           </Badge>
-          <Badge variant="outline" className="px-4 py-2 text-sm">
-            <Award className="w-4 h-4 mr-2" />
+          <Badge variant="outline" className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
+            <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
             AWS Partner
           </Badge>
-          <Badge variant="outline" className="px-4 py-2 text-sm">
-            <CheckCircle className="w-4 h-4 mr-2" />
+          <Badge variant="outline" className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
+            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
             Enterprise Security
           </Badge>
         </div>
