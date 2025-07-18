@@ -1,6 +1,54 @@
 import React, { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone } from "lucide-react";
 import Button from "./Button"; // Adjust import if your Button is from UI library
+
+// Elite Ripple Hamburger Menu
+const HamburgerMenuElite = ({ isOpen, onClick, className = "" }) => (
+  <button
+    onClick={onClick}
+    className={`relative w-9 h-9 flex flex-col justify-center items-center cursor-pointer focus:outline-none group ${className}`}
+    aria-label="Toggle menu"
+  >
+    <div className="relative w-full h-full">
+      <div className={`absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+        {/* Top line */}
+        <span
+          className={`absolute top-1/2 left-1/2 w-6 h-0.5 bg-[#F24E1E] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] transform -translate-x-1/2 shadow-sm ${
+            isOpen ? 'rotate-45 -translate-y-1/2 w-7' : '-translate-y-2 rotate-0 w-6'
+          }`}
+          style={{
+            transformOrigin: 'center',
+            transitionDelay: isOpen ? '0.1s' : '0s'
+          }}
+        />
+        {/* Middle line */}
+        <span
+          className={`absolute top-1/2 left-1/2 w-6 h-0.5 bg-[#F24E1E] transition-all duration-500 ease-out transform -translate-x-1/2 -translate-y-1/2 shadow-sm ${
+            isOpen ? 'opacity-0 scale-0 rotate-180' : 'opacity-100 scale-100 rotate-0'
+          }`}
+          style={{
+            transformOrigin: 'center',
+            transitionDelay: isOpen ? '0s' : '0.2s'
+          }}
+        />
+        {/* Bottom line */}
+        <span
+          className={`absolute top-1/2 left-1/2 w-6 h-0.5 bg-[#F24E1E] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] transform -translate-x-1/2 shadow-sm ${
+            isOpen ? '-rotate-45 -translate-y-1/2 w-7' : 'translate-y-2 rotate-0 w-6'
+          }`}
+          style={{
+            transformOrigin: 'center',
+            transitionDelay: isOpen ? '0.1s' : '0s'
+          }}
+        />
+      </div>
+      {/* Ripple effect */}
+      <div className={`absolute top-1/2 left-1/2 w-12 h-12  rounded-full transition-all duration-700 ease-out transform -translate-x-1/2 -translate-y-1/2 ${
+        isOpen ? 'scale-100 opacity-20' : 'scale-0 opacity-0'
+      }`} />
+    </div>
+  </button>
+);
 
 const Navbar = ({ scrolled, handleButtonClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +61,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
         ${scrolled ? "py-2 shadow-md" : "py-4"}
       `}
     >
-      <div className="container  mx-auto px-4 flex items-center justify-between max-w-7xl transition-all duration-300">
+      <div className="container mx-auto px-4 flex items-center justify-between max-w-7xl transition-all duration-300">
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
@@ -49,19 +97,12 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
           </Button>
         </div>
 
-        {/* Mobile Hamburger Icon */}
+        {/* Mobile Hamburger Icon - Elite Ripple */}
         <div className="md:hidden flex items-center">
-          <button
+          <HamburgerMenuElite
+            isOpen={mobileOpen}
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 rounded-md focus:outline-none"
-            aria-label="Toggle Menu"
-          >
-            {mobileOpen ? (
-              <X className="w-7 h-7 text-[#F24E1E]" />
-            ) : (
-              <Menu className="w-7 h-7 text-[#F24E1E]" />
-            )}
-          </button>
+          />
         </div>
       </div>
 
