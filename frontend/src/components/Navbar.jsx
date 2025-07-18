@@ -8,12 +8,12 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
   return (
     <nav
       className={`
-        fixed top-0 w-full z-50 border-b border-[rgba(242,78,30,0.08)]
+        fixed top-0 w-full z-50 border-b border-[rgba(242,78,30,0.08)] 
         bg-[rgba(255,246,236,0.85)] backdrop-blur-md transition-all duration-300
         ${scrolled ? "py-2 shadow-md" : "py-4"}
       `}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between max-w-7xl transition-all duration-300">
+      <div className="container  mx-auto px-4 flex items-center justify-between max-w-7xl transition-all duration-300">
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
@@ -25,6 +25,12 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
+          <a href="#home" className="text-gray-600 hover:text-emerald-600 transition-colors">
+            Home
+          </a>
+          <a href="#mission" className="text-gray-600 hover:text-emerald-600 transition-colors">
+            Our Mission
+          </a>
           <a href="#solutions" className="text-gray-600 hover:text-emerald-600 transition-colors">
             Solutions
           </a>
@@ -68,6 +74,20 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
         `}
       >
         <div className="flex flex-col items-center py-6 space-y-4">
+          <a
+            href="#home"
+            className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href="#mission"
+            className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            Our Mission
+          </a>
           <a
             href="#solutions"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
