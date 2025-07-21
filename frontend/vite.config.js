@@ -6,7 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),
   tailwindcss(),
-    
   ],
   server: {
     historyApiFallback: true, // 👈 handles 404 on refresh
