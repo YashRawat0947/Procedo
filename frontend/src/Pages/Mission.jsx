@@ -19,7 +19,6 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 
 const Mission = () => {
-    
     const [scrolled, setScrolled] = useState(false)
     const [showScrollTop, setShowScrollTop] = useState(false)
 
@@ -47,13 +46,13 @@ const Mission = () => {
             <Navbar scrolled={scrolled} />
 
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-gray-100 to-orange-50 via-white  py-40 overflow-hidden">
+            <section className="relative bg-gradient-to-br from-gray-100 to-orange-50 via-white py-40 overflow-hidden">
                 {/* Decorative background shapes */}
                 <div className="absolute -top-24 -left-24 w-72 h-72 bg-orange-100 rounded-full opacity-40 blur-2xl pointer-events-none z-0"></div>
                 <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-orange-200 rounded-full opacity-30 blur-3xl pointer-events-none z-0"></div>
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <div className="flex flex-col items-center justify-center">
-                       
+
                         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
                             Our <span className="text-orange-500">Mission</span> & Vision
                         </h1>

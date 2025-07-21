@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Shield,
   Server,
@@ -37,6 +39,17 @@ const cn = (...classes) => {
 }
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#solutions") {
+      // Timeout ensures DOM is ready
+      setTimeout(() => {
+        const el = document.getElementById("solutions");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [location]);
   const handleButtonClick = (action) => {
     console.log(`${action} clicked`);
   };
@@ -98,15 +111,14 @@ function Home() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               {/* Hero Section Buttons */}
-              <Button
-                size="lg"
-                className="bg-[#F24E1E] hover:bg-[#d63e13] text-base sm:text-lg px-6 py-3 text-white"
-                onClick={() => handleButtonClick("Explore Solutions")}
+              <Link
+                to="#solutions"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 sm:px-8 sm:py-3 rounded-md font-medium transition-colors text-xs sm:text-base shadow-lg flex items-center mx-auto"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-4 h-4 inline mr-2" />
                 Explore Our Solutions
-              </Button>
-              <Button
+              </Link>
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="text-base sm:text-lg px-6 py-3 border-[#F24E1E] text-[#F24E1E] hover:bg-[#FFF6EC] bg-transparent"
@@ -114,7 +126,7 @@ function Home() {
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book a Free Consultation
-              </Button>
+              </Button> */}
             </div>
 
             <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-gray-500">
