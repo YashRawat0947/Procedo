@@ -592,13 +592,60 @@ function Home() {
               Contact Us
             </Button>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm opacity-80">
+          {/* <div className="flex flex-wrap items-center justify-center gap-4 text-sm opacity-80">
             <span className="flex items-center gap-1"><span role="img" aria-label="chat">💬</span> <span className="text-[#F24E1E] font-semibold">Live Chat Available</span></span>
             <span className="flex items-center gap-1"><span role="img" aria-label="phone">📞</span> <span className="text-[#F24E1E] font-semibold">Instant Callback</span></span>
             <span className="flex items-center gap-1"><span role="img" aria-label="rocket">🚀</span> <span className="text-[#F24E1E] font-semibold">Quick Response</span></span>
+          </div> */}
+        </div>
+      </section>
+
+      {/* Contact Us */}
+      <section className="bg-gradient-to-br from-[#FFF6EC] to-white py-12 border-t border-gray-100">
+        <div className="container mx-auto px-4 max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-12">
+          {/* Contact Details */}
+          <div className="flex flex-col gap-4 w-full sm:w-auto">
+            <div className="flex items-center gap-3 text-base sm:text-lg font-semibold text-gray-800">
+              <span className="bg-[#F24E1E]/10 rounded-full p-2">
+                <Mail className="w-6 h-6 text-[#F24E1E]" />
+              </span>
+              <a href="mailto:rajeshrawat333@gmail.com" className="hover:underline text-[#F24E1E] transition-colors">
+                rajeshrawat333@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-3 text-base sm:text-lg font-semibold text-gray-800">
+              <span className="bg-[#F24E1E]/10 rounded-full p-2">
+                <Phone className="w-6 h-6 text-[#F24E1E]" />
+              </span>
+              <div className="flex flex-col leading-tight">
+                <a href="tel:+917217776020" className="hover:underline text-[#F24E1E] transition-colors">
+                  +91 7217776020
+                </a>
+                <a href="tel:+919958896172" className="hover:underline text-[#F24E1E] transition-colors">
+                  +91 9958896172
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Divider for desktop */}
+          <div className="hidden sm:block h-16 border-l border-gray-200" />
+          {/* Call to Action */}
+          <div className="flex flex-col items-center w-full sm:w-auto">
+            <span className="text-sm text-gray-500 mb-2">Prefer a quick chat?</span>
+            <a
+              href="mailto:rajeshrawat333@gmail.com"
+              className="bg-[#F24E1E] hover:bg-[#d63e13] text-white px-8 py-3 rounded-full font-semibold transition-colors text-base shadow-lg flex items-center gap-2"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Contact Us Now
+            </a>
+
+            <span className="mt-2 text-xs text-[#F24E1E] font-medium flex items-center gap-1">
+            </span>
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <Footer />
