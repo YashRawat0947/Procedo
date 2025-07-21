@@ -7,7 +7,10 @@ export default defineConfig({
   plugins: [react(),
   tailwindcss(),
   ],
-  server: {
-    historyApiFallback: true, // 👈 handles 404 on refresh
+  build: {
+    outDir: 'dist'
   },
+  server: {
+    historyApiFallback: true
+  }
 })
