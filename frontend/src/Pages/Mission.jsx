@@ -14,11 +14,13 @@ import {
     Phone,
 } from "lucide-react"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 
 const Mission = () => {
+    const { id } = useParams();
+   
     const [scrolled, setScrolled] = useState(false)
     const [showScrollTop, setShowScrollTop] = useState(false)
 
@@ -52,7 +54,7 @@ const Mission = () => {
                 <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-orange-200 rounded-full opacity-30 blur-3xl pointer-events-none z-0"></div>
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <div className="flex flex-col items-center justify-center">
-                       
+
                         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
                             Our <span className="text-orange-500">Mission</span> & Vision
                         </h1>
