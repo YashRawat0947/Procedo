@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Phone } from "lucide-react";
 import Button from "./Button"; // Adjust import if your Button is from UI library
+import { Link } from "react-router-dom";
 
 // Elite Ripple Hamburger Menu
 const HamburgerMenuElite = ({ isOpen, onClick, className = "" }) => (
@@ -73,12 +74,12 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <Link to="/" className="text-gray-600 hover:text-emerald-600 transition-colors">
             Home
-          </a>
-          <a href="#mission" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          </Link>
+          <Link to="/mission" className="text-gray-600 hover:text-emerald-600 transition-colors">
             Our Mission
-          </a>
+          </Link>
           <a href="#solutions" className="text-gray-600 hover:text-emerald-600 transition-colors">
             Solutions
           </a>
@@ -115,20 +116,20 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
         `}
       >
         <div className="flex flex-col items-center py-6 space-y-4">
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Home
-          </a>
-          <a
-            href="#mission"
+          </Link>
+          <Link
+            to="/mission"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Our Mission
-          </a>
+          </Link>
           <a
             href="#solutions"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
