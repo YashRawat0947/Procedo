@@ -77,7 +77,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
           <Link to="/" className="text-gray-600 hover:text-emerald-600 transition-colors">
             Home
           </Link>
-          <Link to="/mission/0947" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <Link to="/mission" className="text-gray-600 hover:text-emerald-600 transition-colors">
             Our Mission
           </Link>
           <a href="#solutions" className="text-gray-600 hover:text-emerald-600 transition-colors">
@@ -124,7 +124,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
             Home
           </Link>
           <Link
-            to="/mission/0947"
+            to="/mission"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
