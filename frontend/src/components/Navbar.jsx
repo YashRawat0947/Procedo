@@ -74,19 +74,19 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <Link to="/" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             Home
           </Link>
-          <Link to="/mission" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <Link to="/mission" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             Our Mission
           </Link>
-          <a href="#solutions" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <a href="#solutions" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             Solutions
           </a>
-          <a href="#about" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <a href="#about" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             About
           </a>
-          <a href="#contact" className="text-gray-600 hover:text-emerald-600 transition-colors">
+          <a href="#contact" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             Contact
           </a>
           <Button
