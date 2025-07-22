@@ -1,7 +1,20 @@
-import { Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Phone, MessageCircle } from "lucide-react";
-import React from "react";
+import { Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Phone, MessageCircle, Copy, Check } from "lucide-react";
+import React, { useState } from "react";
 
-const Footer = () => (
+const Footer = () => {
+  const [copiedItem, setCopiedItem] = useState(null);
+
+  const copyToClipboard = async (text, itemId) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedItem(itemId);
+      setTimeout(() => setCopiedItem(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
+  return (
   <footer className="bg-[#FFF6EC] text-[#F24E1E] py-10">
     <div className="container mx-auto px-4 max-w-7xl">
       {/* Main Footer Grid */}
@@ -73,25 +86,73 @@ const Footer = () => (
         <div className="flex flex-col items-center md:items-start">
           <h4 className="font-semibold mb-3">Contact Us</h4>
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-sm">
+            <div className="flex items-center gap-2 text-sm group">
               <span className="bg-[#F24E1E]/10 rounded-full p-1">
                 <Mail className="w-4 h-4 text-[#F24E1E]" />
               </span>
-              <a href="mailto:rajeshrawat333@gmail.com" className="hover:text-gray-700 transition-colors text-gray-400">
-                rajeshrawat333@gmail.com
-              </a>
+              <div className="flex items-center gap-1">
+                <a 
+                  href="mailto:rajeshrawat333@gmail.com" 
+                  className="hover:text-gray-700 transition-colors text-gray-400"
+                >
+                  rajeshrawat333@gmail.com
+                </a>
+                <button
+                  onClick={() => copyToClipboard('rajeshrawat333@gmail.com', 'email')}
+                  className={`p-1 hover:bg-gray-200 rounded transition-all duration-200 ${
+                    copiedItem === 'email' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                  }`}
+                  title="Copy email"
+                >
+                  {copiedItem === 'email' ? (
+                    <Check className="w-3 h-3 text-green-500" />
+                  ) : (
+                    <Copy className="w-3 h-3 text-gray-400" />
+                  )}
+                </button>
+              </div>
             </div>
             <div className="flex items-start gap-2 text-sm">
               <span className="bg-[#F24E1E]/10 rounded-full p-1 mt-0.5">
                 <Phone className="w-4 h-4 text-[#F24E1E]" />
               </span>
               <div className="flex flex-col text-gray-400">
-                <a href="tel:+917217776020" className="hover:text-gray-700 transition-colors">
-                  +91 7217776020
-                </a>
-                <a href="tel:+919958896172" className="hover:text-gray-700 transition-colors">
-                  +91 9958896172
-                </a>
+                <div className="flex items-center gap-1 group">
+                  <a href="tel:+917217776020" className="hover:text-gray-700 transition-colors">
+                    +91 7217776020
+                  </a>
+                  <button
+                    onClick={() => copyToClipboard('+91 7217776020', 'phone1')}
+                    className={`p-1 hover:bg-gray-200 rounded transition-all duration-200 ${
+                      copiedItem === 'phone1' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    }`}
+                    title="Copy phone number"
+                  >
+                    {copiedItem === 'phone1' ? (
+                      <Check className="w-3 h-3 text-green-500" />
+                    ) : (
+                      <Copy className="w-3 h-3 text-gray-400" />
+                    )}
+                  </button>
+                </div>
+                <div className="flex items-center gap-1 group">
+                  <a href="tel:+919958896172" className="hover:text-gray-700 transition-colors">
+                    +91 9958896172
+                  </a>
+                  <button
+                    onClick={() => copyToClipboard('+91 9958896172', 'phone2')}
+                    className={`p-1 hover:bg-gray-200 rounded transition-all duration-200 ${
+                      copiedItem === 'phone2' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    }`}
+                    title="Copy phone number"
+                  >
+                    {copiedItem === 'phone2' ? (
+                      <Check className="w-3 h-3 text-green-500" />
+                    ) : (
+                      <Copy className="w-3 h-3 text-gray-400" />
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
             <div className="mt-3">
@@ -148,5 +209,6 @@ const Footer = () => (
     </div>
   </footer>
 );
+}
 
 export default Footer;
