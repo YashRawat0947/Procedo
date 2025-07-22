@@ -18,7 +18,7 @@ const Footer = () => {
   <footer className="bg-[#FFF6EC] text-[#F24E1E] py-10">
     <div className="container mx-auto px-4 max-w-7xl">
       {/* Main Footer Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex justify-center items-center space-x-2 mb-4">
@@ -33,53 +33,58 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Solutions */}
-        <div className="flex flex-col items-center md:items-start">
-          <h4 className="font-semibold mb-3">Solutions</h4>
-          <ul className="space-y-2 text-sm text-gray-400">
-            <li>
-              <a href="#it" className="hover:text-gray-700 transition-colors">
-                IT Infrastructure
-              </a>
-            </li>
-            <li>
-              <a href="#security" className="hover:text-gray-700 transition-colors">
-                Facilities Security
-              </a>
-            </li>
-            <li>
-              <a href="#audio" className="hover:text-gray-700 transition-colors">
-                AV Conferencing
-              </a>
-            </li>
-          </ul>
-        </div>
+        {/* Solutions & Company - Side by side */}
+        <div className="md:contents">
+          <div className="grid grid-cols-2 gap-4 md:contents">
+            {/* Solutions */}
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-semibold mb-3">Solutions</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <a href="#it" className="hover:text-gray-700 transition-colors">
+                    IT Infrastructure
+                  </a>
+                </li>
+                <li>
+                  <a href="#security" className="hover:text-gray-700 transition-colors">
+                    Facilities Security
+                  </a>
+                </li>
+                <li>
+                  <a href="#audio" className="hover:text-gray-700 transition-colors">
+                    AV Conferencing
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-        {/* Company */}
-        <div className="flex flex-col items-center md:items-start">
-          <h4 className="font-semibold mb-3">Company</h4>
-          <ul className="space-y-2 text-sm text-gray-400">
-            <li>
-              <a href="#about" className="hover:text-gray-700 transition-colors">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#solutions" className="hover:text-gray-700 transition-colors">
-                Solutions
-              </a>
-            </li>
-            {/* <li>
-              <a href="#" className="hover:text-gray-700 transition-colors">
-                Careers
-              </a>
-            </li> */}
-            {/* <li>
-              <a href="#" className="hover:text-gray-700 transition-colors">
-                Contact
-              </a>
-            </li> */}
-          </ul>
+            {/* Company */}
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-semibold mb-3">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <a href="#about" className="hover:text-gray-700 transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#solutions" className="hover:text-gray-700 transition-colors">
+                    Solutions
+                  </a>
+                </li>
+                {/* <li>
+                  <a href="#" className="hover:text-gray-700 transition-colors">
+                    Careers
+                  </a>
+                </li> */}
+                {/* <li>
+                  <a href="#" className="hover:text-gray-700 transition-colors">
+                    Contact
+                  </a>
+                </li> */}
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Contact Us */}

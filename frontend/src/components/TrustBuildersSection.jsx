@@ -137,21 +137,6 @@ function TrustBuildersSection() {
         {/* Testimonials */}
         <InfiniteTestimonials />
         
-        {/* Security Badges */}
-        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-8">
-          <Badge variant="outline" className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
-            <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-            ISO 27001 Certified
-          </Badge>
-          <Badge variant="outline" className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
-            <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-            AWS Partner
-          </Badge>
-          <Badge variant="outline" className="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
-            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-            Enterprise Security
-          </Badge>
-        </div>
       </div>
     </section>
   );
