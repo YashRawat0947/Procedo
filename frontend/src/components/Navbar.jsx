@@ -54,6 +54,19 @@ const HamburgerMenuElite = ({ isOpen, onClick, className = "" }) => (
 const Navbar = ({ scrolled, handleButtonClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Handler for Our Mission click with refresh
+  const handleMissionClick = () => {
+    // Option 1: Force page reload when navigating to /mission
+    window.location.href = '/mission';
+    
+    // Option 2: Alternative - use window.location.reload() if already on mission page
+    // if (window.location.pathname === '/mission') {
+    //   window.location.reload();
+    // } else {
+    //   window.location.href = '/mission';
+    // }
+  };
+
   return (
     <nav
       className={`
@@ -77,17 +90,18 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
           <Link to="/" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             Home
           </Link>
-          <Link to="/mission" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
+          {/* Our Mission with refresh functionality */}
+          <button
+            onClick={handleMissionClick}
+            className="text-gray-600 hover:text-[#F24E1E] transition-colors cursor-pointer"
+          >
             Our Mission
-          </Link>
-          <a href="#solutions" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
+          </button>
+          <a href="/#solutions" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             Solutions
           </a>
-          <a href="#about" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
+          <a href="/#about" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
             About
-          </a>
-          <a href="#contact" className="text-gray-600 hover:text-[#F24E1E] transition-colors">
-            Contact
           </a>
           <Button
             className="bg-[#F24E1E] hover:bg-[#d63e13] text-white"
@@ -123,33 +137,29 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
           >
             Home
           </Link>
-          <Link
-            to="/mission"
+          {/* Mobile Our Mission with refresh */}
+          <button
+            onClick={() => {
+              handleMissionClick();
+              setMobileOpen(false);
+            }}
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
-            onClick={() => setMobileOpen(false)}
           >
             Our Mission
-          </Link>
-          <a
-            href="#solutions"
+          </button>
+          <Link
+            to="/#solutions"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Solutions
-          </a>
+          </Link>
           <a
-            href="#about"
+            href="/#about"
             className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             About
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors"
-            onClick={() => setMobileOpen(false)}
-          >
-            Contact
           </a>
           <Button
             className="bg-[#F24E1E] hover:bg-[#d63e13] text-white w-11/12"
