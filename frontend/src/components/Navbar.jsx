@@ -66,9 +66,9 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
-            src="/Procedo-logo.png"
+            src="/Procedo-logo-2.png"
             alt="Procedo Logo"
-            className={`transition-all duration-300 ${scrolled ? "w-35 h-10" : "w-40 h-12"}`}
+            className={`transition-all duration-300 ${scrolled ? "w-35 h-10" : "w-45 h-12"}`}
           />
         </div>
 
