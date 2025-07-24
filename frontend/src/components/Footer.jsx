@@ -91,8 +91,8 @@ const Footer = () => {
           <div className="md:contents">
             <div className="flex w-auto justify-evenly md:contents mb-4">
               {/* Contact Us */}
-              <div className="flex flex-col justify-between items-center md:items-start">
-                <h4 className="font-semibold mb-2 text-xs md:text-base">Contact Us</h4>
+              <div className="flex flex-col gap-2 items-center md:items-start">
+                <h4 className="font-semibold mb-1 text-xs md:text-base">Contact Us</h4>
                 <div className="space-y-2">
                   <div className="flex items-center  text-[10px] md:text-sm group">
                     <span className="bg-[#F24E1E]/10 rounded-full mr-2 p-0.5 md:p-1">
@@ -173,7 +173,7 @@ const Footer = () => {
               </div>
               {/* Connect */}
               <div className=" flex-col items-center md:items-start w-1/2 md:w-auto">
-                <h4 className=" text-center font-semibold mb-3 text-xs md:text-base">Connect</h4>
+                <h4 className=" text-center font-semibold mb-3 md:mb-0 text-xs md:text-base">Connect</h4>
                 <div className=" flex md:flex-row md:gap-2 justify-center md:justify-center space-x-3 md:space-x-0 md:space-y-4">
                   <a href="#" className="flex items-center justify-center md:justify-start text-gray-400 hover:text-gray-700 transition-colors">
                     <LucideLinkedin className="w-5 h-5 md:w-6 md:h-6 md:mt-3 mr-1" />

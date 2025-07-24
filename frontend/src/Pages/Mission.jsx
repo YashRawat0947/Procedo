@@ -166,7 +166,7 @@ const Mission = () => {
 
 
             {/* Core Values Section */}
-            <section className="bg-[#ffe5c8] py-10 sm:py-20">
+            {/* <section className="bg-[#ffe5c8] py-10 sm:py-20">
                 <div className="container mx-auto px-2 sm:px-4">
                     <div className="text-center mb-8 sm:mb-16">
                         <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
@@ -245,7 +245,7 @@ const Mission = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Service Areas Section */}
             <section className="bg-white py-10 sm:py-20">
