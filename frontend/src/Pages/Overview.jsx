@@ -160,7 +160,7 @@ function Overview() {
                                     </div>
 
                                     {/* Call to Action Button */}
-                                    <div className="mt-8 sm:mt-10 flex justify-center">
+                                    <div id="values" className="mt-8 sm:mt-10 flex justify-center">
                                         <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 flex items-center group shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base">
                                             <span>Explore Our Services</span>
                                             <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -174,7 +174,7 @@ function Overview() {
             </section>
 
             {/* Core Values Section */}
-            <section id="values" className="bg-gradient-to-bl from-orange-50 to-gray-100 via-white">
+            <section  className="bg-gradient-to-bl from-orange-50 to-gray-100 via-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                         {/* Section Header */}

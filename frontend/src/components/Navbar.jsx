@@ -158,13 +158,13 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
                 <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/overview"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Company Overview
                 </button>
-                <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/core-values"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
+                <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/overview/#values"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Our Core Values
                 </button>
                 <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/strategic-partners"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Our Strategic Partners
                 </button>
-                <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/why-us"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
+                <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/overview/#why-us"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Why Us?
                 </button>
               </div>
