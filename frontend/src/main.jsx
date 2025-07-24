@@ -5,7 +5,7 @@ import './index.css'
 import Home from './Pages/Home.jsx'
 import Mission from './Pages/Mission.jsx'
 import Overview from './Pages/Overview.jsx'
-import Career from './Pages/career.jsx'
+import Career from './Pages/Career.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
