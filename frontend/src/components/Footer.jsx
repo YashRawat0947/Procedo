@@ -100,13 +100,13 @@ const Footer = () => {
                     </span>
                     <div className="flex items-center md:w-full w-38 ">
                       <a
-                        href="mailto:rajeshrawat333@gmail.com"
+                        href="mailto:contact@procedoinfo.com"
                         className="hover:text-gray-700 transition-colors w-full text-gray-400 break-all"
                       >
-                        rajeshrawat333@gmail.com
+                        contact@procedoinfo.com
                       </a>
                       <button
-                        onClick={() => copyToClipboard('rajeshrawat333@gmail.com', 'email')}
+                        onClick={() => copyToClipboard('contact@procedoinfo.com', 'email')}
                         className={`p-0.5 md:p-1 hover:bg-gray-200 rounded transition-all duration-200 ${copiedItem === 'email' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                           }`}
                         title="Copy email"
