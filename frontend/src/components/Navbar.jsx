@@ -54,7 +54,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
             <img
               src="/Procedo-logo-2.png"
               alt="Procedo Logo"
-              className={`transition-all duration-300 object-contain ${scrolled ? "w-42 h-10" : "w-40 md:w-50 h-10 md:h-13"}`}
+              className={`transition-all duration-300 object-contain ${scrolled ? " w-38 md:w-42 h-10 md:h-10" : "w-45 md:w-50 h-11 md:h-13"}`}
             />
           </button>
         </div>
