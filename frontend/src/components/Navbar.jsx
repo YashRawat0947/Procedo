@@ -171,7 +171,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
             </div>
           </div>
 
-          <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/services"); }} className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors">
+          <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/#solutions"); }} className="text-gray-700 font-medium text-lg hover:text-[#F24E1E] transition-colors">
             Services
           </button>
 
