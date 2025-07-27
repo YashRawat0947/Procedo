@@ -46,26 +46,26 @@ function Overview() {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
-        const features = [
-        { 
-            icon: Lock, 
-            title: "Enterprise-Grade Security", 
-            desc: "Leveraging the latest advancements in security protocols and threat protection to safeguard your business operations." 
+    const features = [
+        {
+            icon: Lock,
+            title: "Enterprise-Grade Security",
+            desc: "Leveraging the latest advancements in security protocols and threat protection to safeguard your business operations."
         },
-        { 
-            icon: Users, 
-            title: "Expert Team", 
-            desc: "Dedicated specialists committed to your project's success and long-term growth with industry-leading expertise." 
+        {
+            icon: Users,
+            title: "Expert Team",
+            desc: "Dedicated specialists committed to your project's success and long-term growth with industry-leading expertise."
         },
-        { 
-            icon: Network, 
-            title: "Collaborative Approach", 
-            desc: "Working closely with you to tailor solutions to your exact business needs and strategic objectives." 
+        {
+            icon: Network,
+            title: "Collaborative Approach",
+            desc: "Working closely with you to tailor solutions to your exact business needs and strategic objectives."
         },
-        { 
-            icon: Target, 
-            title: "Measurable Results", 
-            desc: "Focusing on delivering tangible business value and return on investment through proven methodologies." 
+        {
+            icon: Target,
+            title: "Measurable Results",
+            desc: "Focusing on delivering tangible business value and return on investment through proven methodologies."
         }
     ];
 
@@ -128,31 +128,31 @@ function Overview() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                     <div className="flex flex-col items-center justify-center text-center">
                         {/* Main Heading */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-0 sm:mb-8 leading-tight drop-shadow-sm">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-0 sm:mb-8 leading-tight drop-shadow-sm">
                             Company
                             <span className="text-orange-500 block sm:inline"> Overview</span>
                         </h1>
 
                         {/* Content Container */}
-                        <div className="w-full max-w-7xl">
+                        <div className="w-full max-w-6xl mx-auto"> {/* Reduced from max-w-7xl to max-w-5xl */}
                             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
-                                    <div className="space-y-4 sm:space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl text-justify">
+                                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-6 lg:p-8 shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300"> {/* Reduced padding on larger screens */}
+                                    <div className="space-y-3 sm:space-y-4 md:space-y-5 text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg lg:text-lg text-justify"> {/* Reduced spacing and font sizes */}
                                         {/* Main Introduction Paragraph */}
-                                        <p className="first-letter:text-4xl sm:first-letter:text-5xl md:first-letter:text-6xl first-letter:font-bold first-letter:text-orange-500  first-letter:mt-1 sm:first-letter:mt-2">
+                                        <p className="first-letter:text-3xl sm:first-letter:text-4xl md:first-letter:text-5xl lg:first-letter:text-5xl first-letter:font-bold first-letter:text-orange-500 first-letter:mt-1"> {/* Reduced first-letter sizes */}
                                             Procedo Infosystems Pvt. Ltd. is an infrastructure-first technology firm delivering integrated solutions across IT Infrastructure, Facilities Security, and Audio-Visual (AV) Systems. Our modular, enterprise-grade offerings are built to support secure operations, resilient growth, and seamless client engagement.
                                         </p>
 
                                         {/* Two Column Grid - Stacks on Mobile */}
-                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
-                                            <div className="bg-orange-50 border-l-4 border-orange-500 p-4 sm:p-6 rounded-r-xl transform hover:scale-[1.02] transition-transform duration-300">
-                                                <p className="text-sm sm:text-base md:text-lg">
+                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5 mt-4 sm:mt-6"> {/* Reduced gaps and margins */}
+                                            <div className="bg-orange-50 border-l-4 border-orange-500 p-3 sm:p-4 md:p-5 rounded-r-xl transform hover:scale-[1.02] transition-transform duration-300"> {/* Reduced padding */}
+                                                <p className="text-xs sm:text-sm md:text-base lg:text-base"> {/* Reduced font sizes */}
                                                     Whether deploying robust network architecture, securing workspaces with intelligent surveillance systems, or enabling modern communication through advanced AV integration—Procedo ensures each environment is tailored, scalable, and aligned with business continuity.
                                                 </p>
                                             </div>
 
-                                            <div className="bg-gray-50 border-l-4 border-gray-400 p-4 sm:p-6 rounded-r-xl transform hover:scale-[1.02] transition-transform duration-300">
-                                                <p className="text-sm sm:text-base md:text-lg">
+                                            <div className="bg-gray-50 border-l-4 border-gray-400 p-3 sm:p-4 md:p-5 rounded-r-xl transform hover:scale-[1.02] transition-transform duration-300"> {/* Reduced padding */}
+                                                <p className="text-xs sm:text-sm md:text-base lg:text-base"> {/* Reduced font sizes */}
                                                     With a commitment to technical precision and implementation clarity, our solutions empower organizations to evolve confidently while protecting their assets, people, and digital workflows.
                                                 </p>
                                             </div>
@@ -160,10 +160,10 @@ function Overview() {
                                     </div>
 
                                     {/* Call to Action Button */}
-                                    <div id="values" className="mt-8 sm:mt-10 flex justify-center">
-                                        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 flex items-center group shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base">
+                                    <div id="values" className="mt-5 sm:mt-6 md:mt-7 flex justify-center"> {/* Reduced margins */}
+                                        <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 rounded-xl font-semibold transition-all duration-300 flex items-center group shadow-lg hover:shadow-xl transform hover:scale-105 text-xs sm:text-sm md:text-base"> {/* Reduced button size and font */}
                                             <span>Explore Our Services</span>
-                                            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                                            <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" /> {/* Reduced icon sizes */}
                                         </button>
                                     </div>
                                 </div>
@@ -174,37 +174,37 @@ function Overview() {
             </section>
 
             {/* Core Values Section */}
-            <section  className="bg-gradient-to-bl from-orange-50 to-gray-100 via-white">
+            <section className="bg-gradient-to-bl from-orange-50 to-gray-100 via-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                         {/* Section Header */}
-                        <div className="text-center mb-12 sm:mb-16">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                        <div className="text-center mb-10 sm:mb-14">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-5">
                                 Our Core <span className="text-orange-500">Values</span>
                             </h2>
-                            <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-4">
+                            <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2">
                                 The principles that guide every solution we deliver and every partnership we build
                             </p>
                         </div>
 
                         {/* Values Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                             {values.map((value, index) => (
                                 <div
                                     key={index}
-                                    className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg border border-white/50 hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-2 cursor-pointer group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                                    className={`bg-white/80 backdrop-blur-sm rounded-2xl p-5 sm:p-6 shadow-md border border-white/40 hover:shadow-lg hover:border-orange-200 transition-all duration-300 hover:-translate-y-2 cursor-pointer group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                                     style={{
                                         transitionDelay: `${700 + index * 100}ms`
                                     }}
                                 >
                                     {/* Icon Container */}
-                                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-500 mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-md mx-auto sm:mx-0">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-500 mb-4 sm:mb-5 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-md mx-auto sm:mx-0">
                                         {value.icon}
                                     </div>
 
                                     {/* Content */}
                                     <div className="text-center sm:text-left">
-                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-orange-500 transition-colors duration-300">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-orange-500 transition-colors duration-300">
                                             {value.title}
                                         </h3>
                                         <p className="text-gray-600 text-sm sm:text-base leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
@@ -218,44 +218,46 @@ function Overview() {
                 </div>
             </section>
 
+
             {/* Why Partner Section */}
-            <section id='why-us' className="py-10 sm:py-16 md:py-20 bg-gradient-to-tr from-gray-100 to-orange-50 via-whit">
+            <section id='why-us' className="py-8 sm:py-14 md:py-18 bg-gradient-to-tr from-gray-100 to-orange-50 via-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                        <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl border border-white/50 relative overflow-hidden">
-                            {/* Subtle background decoration - responsive */}
-                            <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-orange-50 rounded-full -translate-y-16 sm:-translate-y-24 md:-translate-y-32 translate-x-16 sm:translate-x-24 md:translate-x-32 opacity-50"></div>
-                            <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 bg-orange-100 rounded-full translate-y-12 sm:translate-y-18 md:translate-y-24 -translate-x-12 sm:-translate-x-18 md:-translate-x-24 opacity-30"></div>
+                        <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 shadow-lg border border-white/50 relative overflow-hidden">
+
+                            {/* Background Decorations */}
+                            <div className="absolute top-0 right-0 w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 bg-orange-50 rounded-full -translate-y-12 sm:-translate-y-20 md:-translate-y-28 translate-x-12 sm:translate-x-20 md:translate-x-28 opacity-40"></div>
+                            <div className="absolute bottom-0 left-0 w-20 h-20 sm:w-32 sm:h-32 md:w-44 md:h-44 bg-orange-100 rounded-full translate-y-10 sm:translate-y-16 md:translate-y-20 -translate-x-10 sm:-translate-x-16 md:-translate-x-20 opacity-20"></div>
 
                             <div className="relative z-10">
-                                {/* Section Header */}
-                                <div className="text-center mb-12 sm:mb-16">
-                                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                                {/* Header */}
+                                <div className="text-center mb-10 sm:mb-14">
+                                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-5 leading-tight">
                                         Why Partner With <span className="text-orange-500 block sm:inline">Procedo?</span>
                                     </h2>
-                                    <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-2">
+                                    <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2">
                                         Experience the future of infrastructure-driven success with industry-leading expertise
                                     </p>
                                 </div>
 
-                                {/* Features Grid */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                                {/* Features */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                                     {features.map((item, index) => (
                                         <div
                                             key={index}
-                                            className={`bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/80 hover:border-orange-200 hover:shadow-lg transition-all duration-300 group hover:scale-105 cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                                            className={`bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:bg-white/80 hover:border-orange-200 hover:shadow-md transition-all duration-300 group hover:scale-[1.03] cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                                             style={{
-                                                transitionDelay: `${900 + index * 150}ms`
+                                                transitionDelay: `${900 + index * 120}ms`
                                             }}
                                         >
-                                            {/* Icon Container */}
-                                            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-orange-500 transition-all duration-300 shadow-md mx-auto sm:mx-0">
-                                                <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-orange-500 group-hover:text-white transition-colors duration-300" />
+                                            {/* Icon */}
+                                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 group-hover:bg-orange-500 transition-all duration-300 shadow-md mx-auto sm:mx-0">
+                                                <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-orange-500 group-hover:text-white transition-colors duration-300" />
                                             </div>
 
                                             {/* Content */}
                                             <div className="text-center sm:text-left">
-                                                <h3 className="text-orange-500 font-bold text-lg sm:text-xl mb-3 sm:mb-4 group-hover:text-gray-900 transition-colors duration-300 leading-snug">
+                                                <h3 className="text-orange-500 font-bold text-base sm:text-lg mb-2 sm:mb-3 group-hover:text-gray-900 transition-colors duration-300 leading-snug">
                                                     {item.title}
                                                 </h3>
                                                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
@@ -271,6 +273,7 @@ function Overview() {
                     </div>
                 </div>
             </section>
+
 
             {/* Scroll to top button */}
             {showScrollTop && (

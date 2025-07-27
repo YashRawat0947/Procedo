@@ -1,9 +1,9 @@
 import { Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Phone, MessageCircle, Copy, Check } from "lucide-react";
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const [copiedItem, setCopiedItem] = useState(null);
-
   const copyToClipboard = async (text, itemId) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -12,6 +12,14 @@ const Footer = () => {
     } catch (err) {
       console.error('Failed to copy text: ', err);
     }
+  };
+    const navigate = useNavigate();
+
+  const handleScrollAndNavigate = (path) => {
+    window.scrollTo({  behavior: "smooth" });
+    setTimeout(() => {
+      navigate(path);
+    }, 300);
   };
 
   return (
@@ -41,19 +49,19 @@ const Footer = () => {
                 <h4 className="font-semibold mb-3">Solutions</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <a href="#it" className="hover:text-gray-700 transition-colors">
+                    <Link onClick={() => handleScrollAndNavigate("/#it")} className="hover:text-gray-700 transition-colors">
                       IT Infrastructure
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#security" className="hover:text-gray-700 transition-colors">
+                    <Link onClick={() => handleScrollAndNavigate("/#security")} className="hover:text-gray-700 transition-colors">
                       Facilities Security
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#audio" className="hover:text-gray-700 transition-colors">
+                    <Link onClick={() => handleScrollAndNavigate("/#audio")} className="hover:text-gray-700 transition-colors">
                       AV Conferencing
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -63,25 +71,25 @@ const Footer = () => {
                 <h4 className="font-semibold mb-3">Company</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <a href="#about" className="hover:text-gray-700 transition-colors">
-                      About Us
-                    </a>
+                    <Link onClick={() => handleScrollAndNavigate("/company/overview")} className="hover:text-gray-700 transition-colors">
+                       Company Overview
+                    </Link>
                   </li>
                   <li>
-                    <a href="#solutions" className="hover:text-gray-700 transition-colors">
-                      Solutions
-                    </a>
+                    <Link onClick={() => handleScrollAndNavigate("/company/overview/#values")} className="hover:text-gray-700 transition-colors">
+                       Our Core Values
+                    </Link>
                   </li>
-                  {/* <li>
-                  <a href="#" className="hover:text-gray-700 transition-colors">
-                    Careers
-                  </a>
-                </li> */}
-                  {/* <li>
-                  <a href="#" className="hover:text-gray-700 transition-colors">
-                    Contact
-                  </a>
-                </li> */}
+                  <li>
+                    <Link onClick={() => handleScrollAndNavigate("/company/overview/#why-us")} className="hover:text-gray-700 transition-colors">
+                       Our Stratergic Partners
+                    </Link>
+                  </li>
+                  <li>
+                    <Link onClick={() => handleScrollAndNavigate("/company/overview/#why-us")} className="hover:text-gray-700 transition-colors">
+                       Why Us?
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -124,23 +132,7 @@ const Footer = () => {
                       <Phone className="w-2.5 h-2.5 md:w-4 md:h-4 text-[#F24E1E]" />
                     </span>
                     <div className="flex flex-col text-gray-400">
-                      <div className="flex items-center gap-1 group">
-                        <a href="tel:+917217776020" className="hover:text-gray-700 transition-colors">
-                          +91 7217776020
-                        </a>
-                        <button
-                          onClick={() => copyToClipboard('+91 7217776020', 'phone1')}
-                          className={`p-0.5 md:p-1 hover:bg-gray-200 rounded transition-all duration-200 ${copiedItem === 'phone1' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                            }`}
-                          title="Copy phone number"
-                        >
-                          {copiedItem === 'phone1' ? (
-                            <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-green-500" />
-                          ) : (
-                            <Copy className="w-2.5 h-2.5 md:w-3 md:h-3 text-gray-400" />
-                          )}
-                        </button>
-                      </div>
+
                       <div className="flex items-center gap-1 group">
                         <a href="tel:+919958896172" className="hover:text-gray-700 transition-colors">
                           +91 9958896172
@@ -160,15 +152,6 @@ const Footer = () => {
                       </div>
                     </div>
                   </div>
-                  {/* <div className=" flex mt-2 justify-center">
-                    <a
-                      href="mailto:rajeshrawat333@gmail.com"
-                      className="bg-[#F24E1E] hover:bg-[#d63e13] text-white px-2 py-1 md:px-4 md:py-2 rounded-full font-medium transition-colors text-[10px] md:text-sm shadow-md flex items-center gap-1 md:gap-2 w-fit"
-                    >
-                      <MessageCircle className="w-2.5 h-2.5 md:w-4 md:h-4" />
-                      Contact Now
-                    </a>
-                  </div> */}
                 </div>
               </div>
               {/* Connect */}
@@ -190,20 +173,15 @@ const Footer = () => {
         </div>
 
         {/* Divider & Bottom Bar */}
-        <div className="border-t border-[#F24E1E] pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#F24E1E] pt-6 flex flex-col md:flex-row justify-center gap-4 items-center">
           <p className="text-[#1A355D] text-xs sm:text-sm mb-3 md:mb-0 text-center md:text-left">
-            © {new Date().getFullYear()} TechSystems. All rights reserved.
+            © {new Date().getFullYear()} Procedo InfoSystems. All rights reserved.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-xs sm:text-sm text-[#1A355D]">
-            <a href="#" className="hover:text-[#F24E1E] transition-colors">
+            <a href="/privacy" className="hover:text-[#F24E1E] transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-[#F24E1E] transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-[#F24E1E] transition-colors">
-              Cookie Policy
-            </a>
+
           </div>
         </div>
       </div>

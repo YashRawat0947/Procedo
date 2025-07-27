@@ -28,8 +28,6 @@ import {
 } from "lucide-react";
 import TrustBuildersSection from "../components/TrustBuildersSection";
 import Button from "../components/Button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../components/Card";
-import Input from "../components/Input";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -38,8 +36,50 @@ const cn = (...classes) => {
   return classes.filter(Boolean).join(" ")
 }
 
+
 function Home() {
   const location = useLocation();
+  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+      const hero = document.querySelector("#it")
+      if (hero) {
+        const heroHeight = hero.offsetHeight
+        setShowScrollTop(window.scrollY > heroHeight * 0.5)
+      } else {
+        setShowScrollTop(window.scrollY > 300)
+      }
+    }
+    window.addEventListener("it", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+    useEffect(() => {
+        if (location.hash === "#it") {
+            setTimeout(() => {
+                const el = document.getElementById("it");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        }
+    }, [location]);
+    useEffect(() => {
+        if (location.hash === "#security") {
+            setTimeout(() => {
+                const el = document.getElementById("security");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        }
+    }, [location]);
+    useEffect(() => {
+        if (location.hash === "#audio") {
+            setTimeout(() => {
+                const el = document.getElementById("audio");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+        }
+    }, [location]);
 
   useEffect(() => {
     if (location.hash === "#solutions") {
@@ -159,61 +199,15 @@ function Home() {
         </button>
       )}
 
-      {/* About Us Section */}
-      <section id="about" className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-2 sm:px-4 max-w-7xl">
-          <div className="max-w-xl sm:max-w-6xl mx-auto">
-            <div className="text-center mb-10 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Built on Precision. Driven by Purpose.
-              </h2>
-              <p className="text-base sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-2">
-                We are a team of system integrators, IT engineers, and AV experts who believe technology should enable—not complicate—business. With decades of combined experience, we craft digital and physical environments that enhance performance, safety, and communication.
-              </p>
-            </div>
-            <div className="w-full mb-8 sm:mb-16">
-              <div className="flex justify-between gap-2 sm:gap-8 px-2 sm:px-0">
-                <Card className="flex-1 min-w-0 max-w-[110px] sm:min-w-[220px] sm:max-w-[240px] text-center border-0 shadow-lg p-2 sm:p-4">
-                  <CardHeader className="p-2 sm:p-6">
-                    <div className="w-8 h-8 sm:w-14 sm:h-14 bg-[#FFF6EC] rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-3">
-                      <Award className="w-4 h-4 sm:w-7 sm:h-7 text-[#F24E1E]" />
-                    </div>
-                    <CardTitle className="text-sm sm:text-xl font-bold text-gray-900">15+</CardTitle>
-                    <CardDescription className="text-gray-600 text-[10px] sm:text-sm leading-tight">Years of Experience</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="flex-1 min-w-0 max-w-[110px] sm:min-w-[220px] sm:max-w-[240px] text-center border-0 shadow-lg p-2 sm:p-4">
-                  <CardHeader className="p-2 sm:p-6">
-                    <div className="w-8 h-8 sm:w-14 sm:h-14 bg-[#FFF6EC] rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-3">
-                      <Users className="w-4 h-4 sm:w-7 sm:h-7 text-[#F24E1E]" />
-                    </div>
-                    <CardTitle className="text-sm sm:text-xl font-bold text-gray-900">500+</CardTitle>
-                    <CardDescription className="text-gray-600 text-[10px] sm:text-sm leading-tight">Projects Delivered</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="flex-1 min-w-0 max-w-[110px] sm:min-w-[220px] sm:max-w-[240px] text-center border-0 shadow-lg p-2 sm:p-4">
-                  <CardHeader className="p-2 sm:p-6">
-                    <div className="w-8 h-8 sm:w-14 sm:h-14 bg-[#FFF6EC] rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-3">
-                      <Star className="w-4 h-4 sm:w-7 sm:h-7 text-[#F24E1E]" />
-                    </div>
-                    <CardTitle className="text-sm sm:text-xl font-bold text-gray-900">98%</CardTitle>
-                    <CardDescription className="text-gray-600 text-[10px] sm:text-sm leading-tight">Client Retention Rate</CardDescription>
-                  </CardHeader>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Solutions Section */}
       <section id="solutions" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div id="it" className="text-center mb-16">
-            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Three Pillars of Expertise
-            </h2>
-            <p className="text-sm sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
+              Three Pillars of <span className="text-orange-500">Expertise</span>
+            </p>
+
+            <p className="text-5 sm:text-lg  text-gray-600 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to transform how your business operates
             </p>
           </div>
@@ -318,7 +312,7 @@ function Home() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Internet & Hosting Setup</h4>
-                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                          <div id="security"  className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
                             <p>• Domain registration, DNS</p>
                             <p>• Email (Gmail, Zoho, Outlook)</p>
                             <p>• SSL, spam filters, DMARC</p>
@@ -339,7 +333,7 @@ function Home() {
                 </div>
               </div>
               {/* Desktop: Image on side */}
-              <div id="security" className="hidden lg:block relative">
+              <div  className="hidden lg:block relative">
                 <img
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="IT Infrastructure visualization"
@@ -349,7 +343,7 @@ function Home() {
             </div>
 
             {/* Facilities Security */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div  className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative w-full lg:order-2">
                 <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
                   <img
@@ -428,7 +422,7 @@ function Home() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Monitoring & Reporting</h4>
-                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                          <div  id="audio" className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
                             <p>• Real-time dashboards</p>
                             <p>• Remote diagnostics and alerts</p>
                             <p>• Compliance-ready audit trails</p>
@@ -451,10 +445,11 @@ function Home() {
                 </div>
               </div>
 
-              <div id="audio" className="hidden lg:block relative lg:order-1">
+              <div className="hidden lg:block relative lg:order-1">
                 <img
                   src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="Security system visualization"
+
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
               </div>
