@@ -108,7 +108,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
             Our Mission
           </button>
 
-          <button onClick={() => handleScrollAndNavigate("/careers")} className="text-gray-600 hover:text-[#F24E1E] hover:underline underline-offset-4 transition-all">
+          <button onClick={() => handleScrollAndNavigate("/career")} className="text-gray-600 hover:text-[#F24E1E] hover:underline underline-offset-4 transition-all">
             Careers
           </button>
 
