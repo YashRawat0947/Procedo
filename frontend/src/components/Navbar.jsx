@@ -37,7 +37,14 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
   const navigate = useNavigate();
-
+  const handleResponsiveContact = () => {
+    const isMobile = window.innerWidth <= 768; // You can tweak this breakpoint
+    if (isMobile) {
+      window.location.href = "tel:9958896172";
+    } else {
+      window.location.href = "mailto:contact@procedoinfo.com";
+    }
+  };
   const handleScrollAndNavigate = (path) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => {
@@ -114,10 +121,7 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
 
           <Button
             className="bg-[#F24E1E] hover:bg-[#d63e13] text-white shadow-md hover:shadow-lg transition-all duration-300"
-            onClick={() => {
-              handleButtonClick("Contact Us");
-              window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-            }}
+            onClick={handleResponsiveContact}
           >
             <Phone className="w-4 h-4 mr-2" />
             Contact Us

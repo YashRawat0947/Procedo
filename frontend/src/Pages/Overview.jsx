@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Award, Building2, CheckCircle, Clock, Globe, Monitor, Network, Shield, Target, Users, Zap, Sparkles, Star, Lock } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Overview() {
     const [scrolled, setScrolled] = useState(false);
@@ -160,11 +160,14 @@ function Overview() {
                                     </div>
 
                                     {/* Call to Action Button */}
-                                    <div id="values" className="mt-5 sm:mt-6 md:mt-7 flex justify-center"> {/* Reduced margins */}
-                                        <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 rounded-xl font-semibold transition-all duration-300 flex items-center group shadow-lg hover:shadow-xl transform hover:scale-105 text-xs sm:text-sm md:text-base"> {/* Reduced button size and font */}
+                                    <div className="mt-5 sm:mt-6 md:mt-7 flex justify-center"> {/* Reduced margins */}
+                                        <Link
+                                            to="/#solutions"
+                                            className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 sm:px-8 sm:py-3 rounded-md font-medium transition-colors text-xs sm:text-base shadow-lg flex items-center mx-auto"
+                                        >
                                             <span>Explore Our Services</span>
                                             <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" /> {/* Reduced icon sizes */}
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

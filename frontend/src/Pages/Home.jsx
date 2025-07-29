@@ -39,7 +39,7 @@ const cn = (...classes) => {
 
 function Home() {
   const location = useLocation();
-  
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,30 +56,30 @@ function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-    useEffect(() => {
-        if (location.hash === "#it") {
-            setTimeout(() => {
-                const el = document.getElementById("it");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-            }, 0);
-        }
-    }, [location]);
-    useEffect(() => {
-        if (location.hash === "#security") {
-            setTimeout(() => {
-                const el = document.getElementById("security");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-            }, 0);
-        }
-    }, [location]);
-    useEffect(() => {
-        if (location.hash === "#audio") {
-            setTimeout(() => {
-                const el = document.getElementById("audio");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-            }, 0);
-        }
-    }, [location]);
+  useEffect(() => {
+    if (location.hash === "#it") {
+      setTimeout(() => {
+        const el = document.getElementById("it");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [location]);
+  useEffect(() => {
+    if (location.hash === "#security") {
+      setTimeout(() => {
+        const el = document.getElementById("security");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [location]);
+  useEffect(() => {
+    if (location.hash === "#audio") {
+      setTimeout(() => {
+        const el = document.getElementById("audio");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [location]);
 
   useEffect(() => {
     if (location.hash === "#solutions") {
@@ -172,16 +172,13 @@ function Home() {
             <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-gray-500">
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
-                15+ Years Experience
+                Enterprise Grade Solutions
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
                 24/7 Support
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-emerald-600 mr-2" />
-                Enterprise Grade
-              </div>
+
             </div>
           </div>
         </div>
@@ -203,11 +200,11 @@ function Home() {
       <section id="solutions" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div id="it" className="text-center mb-16">
-            <p className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
+            <p className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
               Three Pillars of <span className="text-orange-500">Expertise</span>
             </p>
 
-            <p className="text-5 sm:text-lg  text-gray-600 max-w-3xl mx-auto">
+            <p className="text-5 sm:text-xl  text-gray-600 max-w-5xl mx-auto">
               Comprehensive technology solutions designed to transform how your business operates
             </p>
           </div>
@@ -304,22 +301,6 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    {/* Internet & Hosting Setup */}
-                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
-                      <div className="flex items-start mb-2 sm:mb-3">
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
-                          <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Internet & Hosting Setup</h4>
-                          <div id="security"  className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
-                            <p>• Domain registration, DNS</p>
-                            <p>• Email (Gmail, Zoho, Outlook)</p>
-                            <p>• SSL, spam filters, DMARC</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <blockquote className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4 italic text-gray-700 mb-4 sm:mb-6 text-xs sm:text-base">
                     "We don't just install servers. We build systems that carry your ambitions."
@@ -333,7 +314,7 @@ function Home() {
                 </div>
               </div>
               {/* Desktop: Image on side */}
-              <div  className="hidden lg:block relative">
+              <div className="hidden lg:block relative">
                 <img
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
                   alt="IT Infrastructure visualization"
@@ -343,7 +324,7 @@ function Home() {
             </div>
 
             {/* Facilities Security */}
-            <div  className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative w-full lg:order-2">
                 <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
                   <img
@@ -422,7 +403,7 @@ function Home() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Monitoring & Reporting</h4>
-                          <div  id="audio" className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                          <div id="audio" className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
                             <p>• Real-time dashboards</p>
                             <p>• Remote diagnostics and alerts</p>
                             <p>• Compliance-ready audit trails</p>
@@ -568,24 +549,28 @@ function Home() {
             Whether you're starting from scratch or upgrading legacy systems, our experts are ready to guide you through every step of your digital transformation journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
-            <Button
-              size="lg"
-              variant="default"
-              className="text-lg px-6 py-3 bg-[#F24E1E] hover:bg-[#d63e13] text-white shadow-md"
-              onClick={() => handleButtonClick("Schedule Audit")}
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule a Free Audit
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-6 py-3 border-[#F24E1E] text-[#F24E1E] hover:bg-[#FFF6EC] hover:text-[#F24E1E] bg-transparent shadow-md"
-              onClick={() => handleButtonClick("Contact Us")}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Contact Us
-            </Button>
+            <a href="sales@procedoinfo.com">
+              <Button
+                size="lg"
+                variant="default"
+                className="text-lg px-6 py-3 bg-[#F24E1E] hover:bg-[#d63e13] text-white shadow-md"
+                onClick={() => handleButtonClick("Schedule Audit")}
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Inquiry
+              </Button>
+            </a>
+            <a href="contact@procedoinfo.com">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-6 py-3 border-[#F24E1E] text-[#F24E1E] hover:bg-[#FFF6EC] hover:text-[#F24E1E] bg-transparent shadow-md"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Us
+              </Button>
+            </a>
+
           </div>
           {/* <div className="flex flex-wrap items-center justify-center gap-4 text-sm opacity-80">
             <span className="flex items-center gap-1"><span role="img" aria-label="chat">💬</span> <span className="text-[#F24E1E] font-semibold">Live Chat Available</span></span>
