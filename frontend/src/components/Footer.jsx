@@ -1,6 +1,8 @@
-import { Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Phone, MessageCircle, Copy, Check } from "lucide-react";
+import { Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Phone, MessageCircle, Copy, Check, FacebookIcon, Facebook } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
   const [copiedItem, setCopiedItem] = useState(null);
@@ -162,8 +164,10 @@ const Footer = () => {
                     <LucideLinkedin className="w-5 h-5 md:w-6 md:h-6 md:mt-3 mr-1" />
                     {/* LinkedIn */}
                   </a>
-                  <a href="#" className="flex items-center justify-center md:justify-start text-gray-400 hover:text-gray-700 transition-colors">
-                    <Instagram className="w-5 h-5 md:w-6 md:h-6 mr-1" />
+                  <a href="https://www.facebook.com/share/1LU1ifAuQM/" className="flex items-center justify-center md:justify-start text-gray-400 hover:text-gray-700 transition-colors">
+                    {/* <Facebook className="w-5 h-5 md:w-6 md:h-6 mr-1" /> */}
+                  <FacebookIcon className="w-5 h-5 md:w-6 md:h-6" />
+
                     {/* Instagram */}
                   </a>
                 </div>
