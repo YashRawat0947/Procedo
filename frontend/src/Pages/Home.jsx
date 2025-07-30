@@ -549,7 +549,7 @@ function Home() {
             Whether you're starting from scratch or upgrading legacy systems, our experts are ready to guide you through every step of your digital transformation journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
-            <a href="sales@procedoinfo.com">
+            <a href="mailto:sales@procedoinfo.com">
               <Button
                 size="lg"
                 variant="default"
@@ -560,7 +560,7 @@ function Home() {
                 Inquiry
               </Button>
             </a>
-            <a href="contact@procedoinfo.com">
+            <a href="mailto:contact@procedoinfo.com">
               <Button
                 size="lg"
                 variant="outline"
