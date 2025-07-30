@@ -15,10 +15,10 @@ const Footer = () => {
       console.error('Failed to copy text: ', err);
     }
   };
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleScrollAndNavigate = (path) => {
-    window.scrollTo({  behavior: "smooth" });
+    window.scrollTo({ behavior: "smooth" });
     setTimeout(() => {
       navigate(path);
     }, 300);
@@ -74,22 +74,22 @@ const Footer = () => {
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
                     <Link onClick={() => handleScrollAndNavigate("/company/overview")} className="hover:text-gray-700 transition-colors">
-                       Company Overview
+                      Company Overview
                     </Link>
                   </li>
                   <li>
                     <Link onClick={() => handleScrollAndNavigate("/company/overview/#values")} className="hover:text-gray-700 transition-colors">
-                       Our Core Values
+                      Our Core Values
                     </Link>
                   </li>
                   <li>
                     <Link onClick={() => handleScrollAndNavigate("/company/overview/#why-us")} className="hover:text-gray-700 transition-colors">
-                       Our Stratergic Partners
+                      Our Stratergic Partners
                     </Link>
                   </li>
                   <li>
                     <Link onClick={() => handleScrollAndNavigate("/company/overview/#why-us")} className="hover:text-gray-700 transition-colors">
-                       Why Us?
+                      Why Us?
                     </Link>
                   </li>
                 </ul>
@@ -166,7 +166,7 @@ const Footer = () => {
                   </a>
                   <a href="https://www.facebook.com/share/1LU1ifAuQM/" className="flex items-center justify-center md:justify-start text-gray-400 hover:text-gray-700 transition-colors">
                     {/* <Facebook className="w-5 h-5 md:w-6 md:h-6 mr-1" /> */}
-                  <FacebookIcon className="w-5 h-5 md:w-6 md:h-6" />
+                    <FacebookIcon className="w-5 h-5 md:w-6 md:h-6" />
 
                     {/* Instagram */}
                   </a>
