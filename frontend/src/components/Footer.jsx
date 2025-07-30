@@ -1,8 +1,7 @@
 import { Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Phone, MessageCircle, Copy, Check, FacebookIcon, Facebook } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+
 
 const Footer = () => {
   const [copiedItem, setCopiedItem] = useState(null);
