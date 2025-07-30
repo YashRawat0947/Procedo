@@ -548,14 +548,14 @@ function Home() {
           <p className="text-base sm:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto opacity-90">
             Whether you're starting from scratch or upgrading legacy systems, our experts are ready to guide you through every step of your digital transformation journey.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
+          <div className="flex sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
             <Button
               asChild
               size="lg"
               variant="default"
               className="text-lg px-6 py-3 bg-[#F24E1E] hover:bg-[#d63e13] text-white shadow-md"
             >
-              <a href="mailto:sales@procedoinfo.com">
+              <a href="mailto:sales@procedoinfo.com" className="w-full flex">
                 <Calendar className="w-5 h-5 mr-2" />
                 Inquiry
               </a>
@@ -567,18 +567,13 @@ function Home() {
               variant="outline"
               className="text-lg px-6 py-3 border-[#F24E1E] text-[#F24E1E] hover:bg-[#FFF6EC] hover:text-[#F24E1E] bg-transparent shadow-md"
             >
-              <a href="mailto:contact@procedoinfo.com">
+              <a href="mailto:contact@procedoinfo.com"  className="w-full flex">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Us
               </a>
             </Button>
 
           </div>
-          {/* <div className="flex flex-wrap items-center justify-center gap-4 text-sm opacity-80">
-            <span className="flex items-center gap-1"><span role="img" aria-label="chat">💬</span> <span className="text-[#F24E1E] font-semibold">Live Chat Available</span></span>
-            <span className="flex items-center gap-1"><span role="img" aria-label="phone">📞</span> <span className="text-[#F24E1E] font-semibold">Instant Callback</span></span>
-            <span className="flex items-center gap-1"><span role="img" aria-label="rocket">🚀</span> <span className="text-[#F24E1E] font-semibold">Quick Response</span></span>
-          </div> */}
         </div>
       </section>
 
