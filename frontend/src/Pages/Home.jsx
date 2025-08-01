@@ -539,7 +539,7 @@ function Home() {
       </section>
 
       {/* Trust Builders */}
-      <TrustBuildersSection />
+      {/* <TrustBuildersSection /> */}
 
       {/* Call to Action */}
       <section className="py-12 md:py-20 bg-gradient-to-br bg-[rgba(255,225,219,0.82)] text-[#1A355D]">
