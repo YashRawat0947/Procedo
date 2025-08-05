@@ -22,6 +22,12 @@ const Footer = () => {
       navigate(path);
     }, 300);
   };
+  const handleScrollAndNavigateTop = (path) => {
+    window.scrollTo({top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      navigate(path);
+    }, 300);
+  };
 
   return (
     <footer className="bg-[#FFF6EC] text-[#F24E1E] py-10">
@@ -72,7 +78,7 @@ const Footer = () => {
                 <h4 className="font-semibold mb-3">Company</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <Link onClick={() => handleScrollAndNavigate("/company/overview")} className="hover:text-gray-700 transition-colors">
+                    <Link onClick={() => handleScrollAndNavigateTop("/company/overview")} className="hover:text-gray-700 transition-colors">
                       Company Overview
                     </Link>
                   </li>
@@ -81,11 +87,11 @@ const Footer = () => {
                       Our Core Values
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link onClick={() => handleScrollAndNavigate("/company/overview/#why-us")} className="hover:text-gray-700 transition-colors">
                       Our Stratergic Partners
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link onClick={() => handleScrollAndNavigate("/company/overview/#why-us")} className="hover:text-gray-700 transition-colors">
                       Why Us?

@@ -97,9 +97,9 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
                 >
                   Our Core Values
                 </button>
-                <button onClick={() => handleScrollAndNavigate("/company/strategic-partners")} className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-[#FFF6EC] hover:text-[#F24E1E] transition-colors">
+                {/* <button onClick={() => handleScrollAndNavigate("/company/strategic-partners")} className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-[#FFF6EC] hover:text-[#F24E1E] transition-colors">
                   Our Strategic Partners
-                </button>
+                </button> */}
                 <button onClick={() => navigate("/company/overview/#why-us")} className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-[#FFF6EC] hover:text-[#F24E1E] transition-colors">
                   Why Us?
                 </button>
@@ -165,9 +165,9 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
                 <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/overview/#values"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Our Core Values
                 </button>
-                <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/strategic-partners"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
+                {/* <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/strategic-partners"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Our Strategic Partners
-                </button>
+                </button> */}
                 <button onClick={() => { setMobileOpen(false); handleScrollAndNavigate("/company/overview/#why-us"); }} className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#F24E1E] transition-colors text-base">
                   Why Us?
                 </button>
