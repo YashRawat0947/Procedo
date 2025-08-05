@@ -35,15 +35,15 @@ const Footer = () => {
         {/* Main Footer Grid */}
         <div className="md:flex justify-between mb-4">
           {/* Logo & Tagline */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left mb-5">
-            <div className="flex justify-center items-center space-x-2 mb-4">
+          <div className="flex flex-col items-center text-center md:text-left mb-5">
+            <div className="flex md:justify-center items-center space-x-2 mb-4">
               <img
-                src="/Procedo-logo-2.png"
+                src="/Procedo-logo-3.png"
                 alt="Procedo Logo"
-                className="w-52 h-12 object-contain rounded-lg"
+                className="w-39 h-12 rounded-lg"
               />
             </div>
-            <p className="text-[#1A355D] text-sm max-w-xs">
+            <p className="text-[#1A355D] text-justify max-w-xs">
               Designing intelligent systems that empower businesses to focus on what matters most.
             </p>
           </div>
