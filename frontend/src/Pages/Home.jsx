@@ -293,7 +293,7 @@ function Home() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">Continuity & Recovery</h4>
-                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                          <div id="security" className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
                             <p>• Backup strategy (cloud/local/hybrid)</p>
                             <p>• Disaster recovery plans</p>
                             <p>• Monitoring and failover systems</p>
