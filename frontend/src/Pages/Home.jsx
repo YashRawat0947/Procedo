@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Globe, Phone, TreeStructure, Cloud, Broadcast, CheckCircle } from "phosphor-react";
 import {
   Shield,
-  Server,
   Video,
   Network,
-  Cloud,
   Database,
   Lock,
   Camera,
@@ -14,8 +13,6 @@ import {
   Mic,
   Monitor,
   Headphones,
-  CheckCircle,
-  Phone,
   Mail,
   MapPin,
   Star,
@@ -24,7 +21,6 @@ import {
   Calendar,
   MessageCircle,
   ArrowRight,
-  Globe,
 } from "lucide-react";
 import TrustBuildersSection from "../components/TrustBuildersSection";
 import Button from "../components/Button";
@@ -199,8 +195,8 @@ function Home() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div id="it" className="text-center mb-16">
             <p className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
-              Three Pillars of{" "}
-              <span className="text-orange-500">Expertise</span>
+              Our Core {" "}
+              <span className="text-orange-500">Competencies</span>
             </p>
 
             <p className="text-5 sm:text-xl  text-gray-600 max-w-5xl mx-auto">
@@ -224,7 +220,7 @@ function Home() {
                 <div className="relative z-10 p-2 sm:p-0">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
-                      <Server className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                      <Cloud className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <h3 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">
                       IT Infrastructure
@@ -581,6 +577,8 @@ function Home() {
                 />
               </div>
             </div>
+
+            {/* Telecom Infrastructure Solutions */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Desktop: Image on side */}
               <div className="hidden lg:block relative">
@@ -590,7 +588,7 @@ function Home() {
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
               </div>
-              {/* Mobile: Image as background behind text */}
+              {/* Mobile: Image as background behind text & Right side content for Desktop */}
               <div className="relative w-full">
                 <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
                   <img
@@ -602,6 +600,7 @@ function Home() {
                 <div className="relative z-10 p-2 sm:p-0">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                      {/* Replaced placeholder with Phosphor Icon */}
                       <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <h3 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">
@@ -658,11 +657,11 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    {/* Structured Cabling (CAT6/Fiber) */}
+                    {/* Structured Cabling (CAT6/Fiber) - Replaced Network with TreeStructure */}
                     <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
                       <div className="flex items-start mb-2 sm:mb-3">
                         <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
-                          <Network className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                          <TreeStructure className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">
@@ -682,7 +681,7 @@ function Home() {
                     <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
                       <div className="flex items-start mb-2 sm:mb-3">
                         <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
-                          <Server className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                          <Cloud className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">
@@ -701,11 +700,11 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    {/* LAN/WAN Integration for Voice Traffic */}
+                    {/* LAN/WAN Integration for Voice Traffic - Replaced Network with Broadcast */}
                     <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
                       <div className="flex items-start mb-2 sm:mb-3">
                         <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
-                          <Network className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                          <Broadcast className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-xs sm:text-base">
@@ -745,12 +744,12 @@ function Home() {
                     "Communication is the backbone of every modern business—make
                     yours future-ready."
                   </blockquote>
-                  {/* <Button
+                  <Button
                     className="bg-[#F24E1E] hover:bg-[#d63e13] text-white text-xs sm:text-base"
                     onClick={() => handleButtonClick("Telecom Solutions")}
                   >
                     Learn More About Telecom Solutions
-                  </Button> */}
+                  </Button>
                 </div>
               </div>
             </div>
