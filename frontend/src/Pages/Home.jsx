@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Globe, Phone, TreeStructure, Cloud, Broadcast, CheckCircle } from "phosphor-react";
+import {
+  Globe,
+  Phone,
+  TreeStructure,
+  Cloud,
+  Broadcast,
+  CheckCircle,
+  Thermometer,
+} from "phosphor-react";
 import {
   Shield,
   Video,
@@ -21,6 +29,8 @@ import {
   Calendar,
   MessageCircle,
   ArrowRight,
+  Zap,
+  Server,
 } from "lucide-react";
 import TrustBuildersSection from "../components/TrustBuildersSection";
 import Button from "../components/Button";
@@ -195,8 +205,7 @@ function Home() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div id="it" className="text-center mb-16">
             <p className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight drop-shadow-sm">
-              Our Core {" "}
-              <span className="text-orange-500">Competencies</span>
+              Our Core <span className="text-orange-500">Competencies</span>
             </p>
 
             <p className="text-5 sm:text-xl  text-gray-600 max-w-5xl mx-auto">
@@ -212,7 +221,7 @@ function Home() {
               <div className="relative w-full">
                 <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    src="/IT.png"
                     alt="IT Infrastructure visualization"
                     className="w-full h-full object-cover opacity-20"
                   />
@@ -332,7 +341,7 @@ function Home() {
               {/* Desktop: Image on side */}
               <div className="hidden lg:block relative">
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  src="/IT.png"
                   alt="IT Infrastructure visualization"
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
@@ -751,6 +760,156 @@ function Home() {
                     Learn More About Telecom Solutions
                   </Button>
                 </div>
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Mobile: Image as background behind text */}
+              <div className="relative w-full">
+                <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Power and Infrastructure Systems"
+                    className="w-full h-full object-cover opacity-20"
+                  />
+                </div>
+                <div className="relative z-10 p-2 sm:p-0">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                      <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">
+                      Power & Precision Systems
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-lg text-[#F24E1E] font-medium mb-2 sm:mb-4">
+                    "UPS • Cooling • Racks — Scalable Infrastructure for Uptime
+                    and Control"
+                  </p>
+                  <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-xs sm:text-base">
+                    At Procedo Infosystems, we deliver infrastructure that
+                    powers continuity and reflects your operational values.
+                    Whether you are running a high-density datacentre, a compact
+                    office, or a workspace, our services are engineered for
+                    resilience, efficiency, and enforceable support.
+                  </p>
+
+                  <div className="space-y-4 sm:space-y-6 mb-4 sm:mb-8">
+                    {/* UPS & Power */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">
+                            UPS & Power
+                          </h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>
+                              • Online and modular UPS systems tailored to
+                              runtime and load
+                            </p>
+                            <p>
+                              • Battery banks with optimized sizing and
+                              SLA-bound reliability
+                            </p>
+                            <p>
+                              • Intelligent PDUs, surge protection, and
+                              dual-feed failover architecture
+                            </p>
+                            <p>
+                              • Generator integration and AMC structures with
+                              retention logic
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Cooling */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Thermometer className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">
+                            Cooling
+                          </h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>
+                              • Rack-level and room-level cooling for
+                              high-density or compact setups
+                            </p>
+                            <p>
+                              • Redundant configurations (N+1, 2N) with
+                              temperature and humidity monitoring
+                            </p>
+                            <p>
+                              • HVAC integration for energy-efficient climate
+                              control
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Server, Network & Smart Racks */}
+                    <div className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4">
+                      <div className="flex items-start mb-2 sm:mb-3">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#F24E1E] rounded-lg flex items-center justify-center mr-2 sm:mr-3 mt-1 flex-shrink-0">
+                          <Server className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-base">
+                            Server, Network & Smart Racks
+                          </h4>
+                          <div className="text-gray-600 text-[10px] sm:text-sm space-y-1 mt-1">
+                            <p>
+                              <strong>Server Racks:</strong> High-density
+                              enclosures with airflow optimization and cable
+                              management
+                            </p>
+                            <p>
+                              <strong>Network Racks:</strong> Structured
+                              patching, secure access, and modular layout
+                            </p>
+                            <p>
+                              <strong>Smart Racks:</strong> Integrated UPS,
+                              cooling, PDUs, and sensors with real-time
+                              dashboards and remote control
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="border-l-4 border-[#F24E1E] pl-2 sm:pl-4 italic text-gray-700 mb-4 sm:mb-6 text-xs sm:text-base">
+                    "Power without precision is chaos. Precision without power
+                    is limitation. We deliver both."
+                  </blockquote>
+
+                  {/* Uncomment if you want to add a button */}
+                  {/* 
+          <Button
+            className="bg-[#F24E1E] hover:bg-[#d63e13] text-white text-xs sm:text-base"
+            onClick={() => handleButtonClick("Power & Precision Systems")}
+          >
+            Learn More About Power Solutions
+          </Button> 
+          */}
+                </div>
+              </div>
+
+              {/* Desktop: Image on side */}
+              <div className="hidden lg:block relative">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  alt="Power and Infrastructure Systems"
+                  className="rounded-lg shadow-lg w-full h-auto"
+                />
               </div>
             </div>
           </div>

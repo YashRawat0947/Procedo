@@ -161,6 +161,10 @@ const Mission = () => {
                                         <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1.5 sm:mr-2" />
                                         <span className="text-xs sm:text-base">Telecom Infrastructure visualization</span>
                                     </li>
+                                    <li className="flex items-center text-gray-600">
+                                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1.5 sm:mr-2" />
+                                        <span className="text-xs sm:text-base">Power & Precision Systems</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
