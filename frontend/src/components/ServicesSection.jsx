@@ -57,57 +57,87 @@ const ServicesSection = ({
 
     if (!section || !header) return;
 
-    // Header animation
-    gsap.fromTo(
-      header.children,
-      {
-        opacity: 0,
-        y: 50,
-        scale: 0.9
-      },
-      {
+    // Only animate header on desktop/tablet (not mobile)
+    if (window.innerWidth >= 768) {
+      gsap.fromTo(
+        header.children,
+        {
+          opacity: 0,
+          y: 50,
+          scale: 0.9
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: defaultAnimationConfig.duration,
+          stagger: defaultAnimationConfig.headerDelay,
+          ease: defaultAnimationConfig.ease,
+          scrollTrigger: {
+            trigger: header,
+            start: defaultAnimationConfig.headerTriggerStart,
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    } else {
+      // Instantly show header on mobile (no animation)
+      gsap.set(header.children, {
         opacity: 1,
         y: 0,
-        scale: 1,
-        duration: defaultAnimationConfig.duration,
-        stagger: defaultAnimationConfig.headerDelay,
-        ease: defaultAnimationConfig.ease,
-        scrollTrigger: {
-          trigger: header,
-          start: defaultAnimationConfig.headerTriggerStart,
-          toggleActions: "play none none reverse"
-        }
-      }
-    );
+        scale: 1
+      });
+    }
 
     // Service cards animation
     serviceElements.forEach((service, index) => {
       if (!service) return;
 
+      const isMobile = window.innerWidth < 768;
       const isEven = index % 2 === 0;
       const content = service.querySelector('.service-content');
       const image = service.querySelector('.service-image');
       const features = service.querySelectorAll('.feature-item');
 
       // Set initial states
-      gsap.set(content, {
-        opacity: 0,
-        x: isEven ? -100 : 100,
-        scale: 0.95
-      });
-
-      if (image) {
-        gsap.set(image, {
+      if (isMobile) {
+        gsap.set(content, {
           opacity: 0,
-          x: isEven ? 100 : -100,
-          scale: 0.95,
-          rotationY: isEven ? -15 : 15
+          y: 40,
+          x: 0,
+          scale: 0.95
         });
+        if (image) {
+          gsap.set(image, {
+            opacity: 0,
+            y: 40,
+            x: 0,
+            scale: 0.95,
+            rotationY: 0
+          });
+        }
+      } else {
+        gsap.set(content, {
+          opacity: 0,
+          x: isEven ? -100 : 100,
+          y: 0,
+          scale: 0.95
+        });
+        if (image) {
+          gsap.set(image, {
+            opacity: 0,
+            x: isEven ? 100 : -100,
+            y: 0,
+            scale: 0.95,
+            rotationY: isEven ? -15 : 15
+          });
+        }
       }
 
       gsap.set(features, {
         opacity: 0,
-        y: 30,
+        y: isMobile ? 40 : 30,
+        x: 0,
         scale: 0.9
       });
 
@@ -121,34 +151,42 @@ const ServicesSection = ({
         }
       });
 
-      // Animate content (heading/description)
-    //   tl.to(content, {
-    //     opacity: 1,
-    //     x: 0,
-    //     scale: 1,
-    //     duration: 0.6,
-    //     ease: defaultAnimationConfig.ease
-    //   });
-
-      // Animate image and features together
+      // Animate content, image, and features
       if (image) {
-        tl.to([content,image, features], {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          rotationY: 0,
-          duration: 2,
-          stagger: {
-            each: 0.1,
-            amount: 0
-          },
-          ease: defaultAnimationConfig.ease
-        }, "+=0"); // starts right after content
+        if (isMobile) {
+          tl.to([content, image, features], {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            scale: 1,
+            rotationY: 0,
+            duration: 1.1,
+            stagger: {
+              each: 0,
+              amount: 0
+            },
+            ease: defaultAnimationConfig.ease
+          }, "+=0");
+        } else {
+          tl.to([content, image, features], {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            rotationY: 0,
+            duration: 1.2,
+            stagger: {
+              each: 0,
+              amount: 0
+            },
+            ease: defaultAnimationConfig.ease
+          }, "+=0");
+        }
       } else {
         tl.to(features, {
           opacity: 1,
           y: 0,
+          x: 0,
           scale: 1,
           duration: 0.7,
           stagger: 0,
