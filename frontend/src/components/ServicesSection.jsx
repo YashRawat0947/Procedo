@@ -248,7 +248,7 @@ const ServicesSection = ({
             <div className="service-content relative w-full">
               <div className="block lg:hidden absolute inset-0 z-0 rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  src="IT.png"
                   alt="IT Infrastructure visualization"
                   className="w-full h-full object-cover opacity-20"
                 />
@@ -358,7 +358,7 @@ const ServicesSection = ({
             <div className="service-image hidden lg:block relative">
               <div className="rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  src="IT.png"
                   alt="IT Infrastructure visualization"
                   className="w-full h-auto"
                 />
