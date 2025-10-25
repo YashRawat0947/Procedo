@@ -57,7 +57,7 @@ const App = () => {
             <img
               src="/Procedo-logo4.png"
               alt="Procedo Logo"
-              className="w-39 md:w-40 h-11 md:h-14 transition-all duration-300"
+              className="w-38 md:w-40 h-11 md:h-14 transition-all duration-300"
             />
           </div>
         </div>
