@@ -735,12 +735,6 @@ const ServicesSection = ({
                   "Communication is the backbone of every modern business—make yours future-ready."
                 </blockquote>
 
-                <button
-                  className="bg-[#F24E1E] hover:bg-[#d63e13] text-white text-xs sm:text-base px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover-element"
-                  onClick={() => handleButtonClick("Telecom Solutions")}
-                >
-                  Learn More About Telecom Solutions
-                </button>
               </div>
             </div>
           </div>

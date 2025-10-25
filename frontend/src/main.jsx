@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import React, { StrictMode, useState, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
@@ -10,18 +10,83 @@ import Privacy from './Pages/Privacy.jsx'
 import CookiePolicy from './Pages/CookiePolicy.jsx'
 import TermsOfService from './Pages/TermsOfService.jsx'
 
+const App = () => {
+  const [loading, setLoading] = useState(true)
+  const [fadeInContent, setFadeInContent] = useState(false)
+  const [overlayMounted, setOverlayMounted] = useState(true)
+  const [overlayVisible, setOverlayVisible] = useState(true)
+
+  useEffect(() => {
+    const moveTimer = setTimeout(() => {
+      setLoading(false)
+      const startContentTimer = setTimeout(() => {
+        setFadeInContent(true)
+        setOverlayVisible(false)
+        const removeOverlayTimer = setTimeout(() => {
+          setOverlayMounted(false)
+        }, 800)
+        return () => clearTimeout(removeOverlayTimer)
+      }, 1000)
+      return () => clearTimeout(startContentTimer)
+    }, 1000)
+
+    return () => clearTimeout(moveTimer)
+  }, [])
+
+  return (
+    <>
+      {/* Overlay + Animated Logo */}
+      {overlayMounted && (
+        <div
+          className={`fixed inset-0 z-[90] transition-opacity duration-700 ease-in-out ${
+            overlayVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          {/* background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#FFF6EC] via-white to-[#FFE8D6]" />
+
+          {/* Animated Logo - center -> navbar */}
+          <div
+            className={`fixed transition-all duration-1000 ease-in-out ${
+              loading
+                ? 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-140 z-[100] opacity-100'
+                : 'top-4 left-4 md:left-[calc(0.5rem+max((100vw-80rem)/2,0px))] translate-x-0 translate-y-0 scale-100 z-[100] opacity-100'
+            }`}
+            style={{ willChange: 'transform, top, left, opacity' }}
+          >
+            <img
+              src="/Procedo-logo4.png"
+              alt="Procedo Logo"
+              className="w-39 md:w-40 h-11 md:h-14 transition-all duration-300"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Main Content - fades in smoothly */}
+      <BrowserRouter>
+        <div
+          className={`transition-all duration-700 ease-out ${
+            fadeInContent ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mission" element={<Mission />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/company/overview" element={<Overview />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
+  )
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mission" element={<Mission />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/company/overview" element={<Overview />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/cookie-policy" element={<CookiePolicy />} />
-      </Routes>
-    </BrowserRouter>
+    <App />
   </StrictMode>,
 )

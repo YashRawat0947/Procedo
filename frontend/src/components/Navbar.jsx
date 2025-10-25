@@ -65,8 +65,8 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
               src="/Procedo-logo4.png"
               alt="Procedo Logo"
               className={`transition-all duration-300  ${scrolled
-                  ? "w-38 md:w-42 h-10 md:h-13"
-                  : "w-45 md:w-45 h-11 md:h-13"
+                  ? "w-34 md:w-39 h-10 md:h-13"
+                  : "w-39 md:w-40 h-11 md:h-14"
                 }`}
             />
           </button>
