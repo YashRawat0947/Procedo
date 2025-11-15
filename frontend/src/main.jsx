@@ -2,13 +2,45 @@ import React, { StrictMode, useState, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
-import Home from './Pages/Home.jsx'
-import Mission from './Pages/Mission.jsx'
-import Career from './Pages/Career.jsx'
-import Overview from './Pages/Overview.jsx'
-import Privacy from './Pages/Privacy.jsx'
-import CookiePolicy from './Pages/CookiePolicy.jsx'
-import TermsOfService from './Pages/TermsOfService.jsx'
+
+// Bright Theme Pages
+import BrightHome from './themes/bright/Home.jsx'
+import BrightMission from './themes/bright/Mission.jsx'
+import BrightCareer from './themes/bright/Career.jsx'
+import BrightOverview from './themes/bright/Overview.jsx'
+import BrightPrivacy from './themes/bright/Privacy.jsx'
+import BrightCookiePolicy from './themes/bright/CookiePolicy.jsx'
+import BrightTermsOfService from './themes/bright/TermsOfService.jsx'
+
+// Dark Theme Pages
+import DarkHome from './themes/dark/Home.jsx'
+import DarkMission from './themes/dark/Mission.jsx'
+import DarkCareer from './themes/dark/Career.jsx'
+import DarkOverview from './themes/dark/Overview.jsx'
+import DarkPrivacy from './themes/dark/Privacy.jsx'
+import DarkCookiePolicy from './themes/dark/CookiePolicy.jsx'
+import DarkTermsOfService from './themes/dark/TermsOfService.jsx'
+
+import { ThemeProvider, useTheme } from './context/ThemeContext'
+import ThemeLoader from './components/ThemeLoader'
+
+// Theme Router Component
+const ThemedRoutes = () => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
+  return (
+    <Routes>
+      <Route path="/" element={isDark ? <DarkHome /> : <BrightHome />} />
+      <Route path="/mission" element={isDark ? <DarkMission /> : <BrightMission />} />
+      <Route path="/career" element={isDark ? <DarkCareer /> : <BrightCareer />} />
+      <Route path="/privacy" element={isDark ? <DarkPrivacy /> : <BrightPrivacy />} />
+      <Route path="/company/overview" element={isDark ? <DarkOverview /> : <BrightOverview />} />
+      <Route path="/terms-of-service" element={isDark ? <DarkTermsOfService /> : <BrightTermsOfService />} />
+      <Route path="/cookie-policy" element={isDark ? <DarkCookiePolicy /> : <BrightCookiePolicy />} />
+    </Routes>
+  );
+};
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -34,8 +66,8 @@ const App = () => {
   }, [])
 
   return (
-    <>
-      {/* Overlay + Animated Logo */}
+    <ThemeProvider>
+      {/* Initial Page Load Overlay + Animated Logo */}
       {overlayMounted && (
         <div
           className={`fixed inset-0 z-[90] transition-opacity duration-700 ease-in-out ${
@@ -63,6 +95,9 @@ const App = () => {
         </div>
       )}
 
+      {/* Theme Transition Loader */}
+      <ThemeLoader />
+
       {/* Main Content - fades in smoothly */}
       <BrowserRouter>
         <div
@@ -70,18 +105,10 @@ const App = () => {
             fadeInContent ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/mission" element={<Mission />} />
-            <Route path="/career" element={<Career />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/company/overview" element={<Overview />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/cookie-policy" element={<CookiePolicy />} />
-          </Routes>
+          <ThemedRoutes />
         </div>
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   )
 }
 

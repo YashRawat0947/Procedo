@@ -15,8 +15,8 @@ import {
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import Footer from "../../components/Footer"
+import Navbar from "../../components/Navbar"
 
 const Mission = () => {
     const [scrolled, setScrolled] = useState(false)

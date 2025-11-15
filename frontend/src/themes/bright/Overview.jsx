@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { ArrowRight, Award, Building2, CheckCircle, Clock, Globe, Monitor, Network, Shield, Target, Users, Zap, Sparkles, Star, Lock } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
