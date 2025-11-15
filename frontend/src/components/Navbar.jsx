@@ -67,16 +67,20 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
         <div className="flex items-center space-x-3">
           <button
             onClick={() => handleScrollAndNavigate("/")}
-            className="cursor-pointer"
+            className="cursor-pointer flex items-center gap-3"
           >
             <img
-              src="/Procedo-logo4.png"
+              src="/Procedo-logo-3-only.png"
               alt="Procedo Logo"
               className={`transition-all duration-300 ${scrolled
-                  ? "w-34 md:w-39 h-10 md:h-13"
-                  : "w-38 md:w-40 h-11 md:h-14"
+                  ? "w-10 md:w-12 h-10 md:h-12"
+                  : "w-11 md:w-12 h-11 md:h-14"
                 }`}
             />
+            <div className="flex flex-col leading-none">
+              <span className="text-[#F24E1E] font-bold text-xl md:text-3xl tracking-tight "style={{ fontFamily: "'Nunito', 'Quicksand', 'Rounded Mplus 1c', 'Comfortaa', sans-serif" }}>procedo</span>
+              <span className="text-[#1D3557] font-bold text-xs md:text-sm tracking-wide">INFOSYSTEMS</span>
+            </div>
           </button>
         </div>
 

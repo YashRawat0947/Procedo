@@ -79,7 +79,7 @@ const App = () => {
 
           {/* Animated Logo - center -> navbar */}
           <div
-            className={`fixed transition-all duration-1000 ease-in-out ${
+            className={`fixed transition-all duration-1000 ease-in-out flex items-center gap-3 ${
               loading
                 ? 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-140 z-[100] opacity-100'
                 : 'top-4 left-4 md:left-[calc(0.5rem+max((100vw-80rem)/2,0px))] translate-x-0 translate-y-0 scale-100 z-[100] opacity-100'
@@ -87,10 +87,14 @@ const App = () => {
             style={{ willChange: 'transform, top, left, opacity' }}
           >
             <img
-              src="/Procedo-logo4.png"
+              src="/Procedo-logo-3-only.png"
               alt="Procedo Logo"
-              className="w-38 md:w-40 h-11 md:h-14 transition-all duration-300"
+              className="w-38 md:w-12 h-11 md:h-14 transition-all duration-300"
             />
+            <div className="flex flex-col leading-none">
+              <span className="text-[#F24E1E] font-bold text-xl md:text-3xl tracking-tight"style={{ fontFamily: "'Nunito', 'Quicksand', 'Rounded Mplus 1c', 'Comfortaa', sans-serif" }}>procedo</span>
+              <span className="text-[#1D3557] font-bold ml-2 text-xs md:text-sm tracking-wide">INFOSYSTEMS</span>
+            </div>
           </div>
         </div>
       )}
