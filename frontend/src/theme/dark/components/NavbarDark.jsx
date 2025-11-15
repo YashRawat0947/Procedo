@@ -1,9 +1,9 @@
 // src/components/Navbar.jsx
 import React, { useState } from "react";
 import { Phone } from "lucide-react";
-import Button from "./Button";
+import Button from "../../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
-import { useTheme } from "./ThemeProvider";  
+import { useTheme } from "../../../components/UnifiedThemeProvider";
 
 const HamburgerMenuElite = ({ isOpen, onClick, color, className = "" }) => (
   <button
@@ -47,7 +47,7 @@ const HamburgerMenuElite = ({ isOpen, onClick, color, className = "" }) => (
   </button>
 );
 
-const Navbar = ({ scrolled, handleButtonClick }) => {
+const NavbarDark = ({ scrolled, handleButtonClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
   const navigate = useNavigate();
@@ -274,4 +274,4 @@ const Navbar = ({ scrolled, handleButtonClick }) => {
   );
 };
 
-export default Navbar;
+export default NavbarDark;
